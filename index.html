@@ -1,201 +1,1293 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-
+<html lang="en">
 <head>
-    <meta charset= "UTF-8">
-    <meta http-equiv ="X-UA-Compatible">
-    <title>病理学实验记录</title>
-    <style>
-        img {
-            width:50;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看图说话</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        var pic = new Array;
-        pic[0] = './img/1.png';
-        pic[1] = './img/2.png';
-        pic[2] = './img/3.png';
-        pic[3] = './img/4.png';
-        pic[4] = './img/5.png';
-        pic[5] = './img/6.png';
-        pic[6] = './img/7.png';
-        pic[7] = './img/8.png';
-        pic[8] = './img/9.png';
-        pic[9] = './img/10.png';
-        pic[10] = './img/11.png';
-        pic[11] = './img/12.png';
-        pic[12] = './img/13.png';
-        pic[13] = './img/14.png';
-        pic[14] = './img/15.png';
-        pic[15] = './img/16.png';
-        pic[16] = './img/17.png';
-        pic[17] = './img/18.png';
-        pic[18] = './img/19.png';
-        pic[19] = './img/20.png';
-        pic[20] = './img/21.png';
-        pic[21] = './img/22.png';
-        pic[22] = './img/23.png';
-        pic[23] = './img/24.png';
-        pic[24] = './img/25.png';
-        pic[25] = './img/26.png';
-        pic[26] = './img/27.png';
-        pic[27] = './img/28.png';
-        pic[28] = './img/29.png';
-        pic[29] = './img/30.png';
-        pic[30] = './img/31.png';
-        pic[31] = './img/32.png';
-        pic[32] = './img/33.png';
-        pic[33] = './img/34.png';
-        pic[34] = './img/35.png';
-        pic[35] = './img/36.png';
-        pic[36] = './img/37.png';
-        pic[37] = './img/38.png';
-        pic[38] = './img/39.png';
-        pic[39] = './img/40.png';
-        pic[40] = './img/41.png';
-        pic[41] = './img/42.png';
-        pic[42] = './img/43.png';
-        pic[43] = './img/44.png';
-        pic[44] = './img/45.png';
-        pic[45] = './img/46.png';
-        pic[46] = './img/47.png';
-        pic[47] = './img/48.png';
-        pic[48] = './img/49.png';
-        pic[49] = './img/50.png';
-        pic[50] = './img/51.png';
-        pic[51] = './img/52.png';
-        pic[52] = './img/53.png';
-        pic[53] = './img/54.png';
-        pic[54] = './img/55.png';
-        pic[55] = './img/56.png';
-        pic[56] = './img/57.png';
-        pic[57] = './img/58.png';
-        pic[58] = './img/59.png';
-        pic[59] = './img/60.png';
-        pic[60] = './img/61.png';
-        pic[61] = './img/62.png';
-        pic[62] = './img/63.png';
-        pic[63] = './img/64.png';
-        pic[64] = './img/65.png';
-        pic[65] = './img/66.png';
-        pic[66] = './img/67.png';
-        pic[67] = './img/68.png';
-        pic[68] = './img/69.png';
-        pic[69] = './img/70.png';
-        pic[70] = './img/71.png';
-        pic[71] = './img/72.png';
-        pic[72] = './img/73.png';
-        pic[73] = './img/74.png';
-        pic[74] = './img/75.png';
-        pic[75] = './img/76.png';
-        pic[76] = './img/77.png';
-        pic[77] = './img/78.png';
-        pic[78] = './img/79.png';
-        pic[79] = './img/80.png';
-        pic[80] = './img/81.png';
-        pic[81] = './img/82.png';
-        pic[82] = './img/83.png';
-        pic[83] = './img/84.png';
-        pic[84] = './img/85.png';
-        pic[85] = './img/86.png';
-        pic[86] = './img/87.png';
-        pic[87] = './img/88.png';
-        pic[88] = './img/89.png';
-        pic[89] = './img/90.png';
-        pic[90] = './img/91.png';
-        pic[91] = './img/92.png';
-        pic[92] = './img/93.png';
-        pic[93] = './img/94.png';
-        pic[94] = './img/95.png';
-        pic[95] = './img/96.png';
-        pic[96] = './img/97.png';
-        pic[97] = './img/98.png';
-        pic[98] = './img/99.png';
-        pic[99] = './img/100.png';
-        pic[100] = './img/101.png';
-        pic[101] = './img/102.png';
-        pic[102] = './img/103.png';
-        pic[103] = './img/104.png';
-        pic[104] = './img/105.png';
-        pic[105] = './img/106.png';
-        pic[106] = './img/107.png';
-        pic[107] = './img/108.png';
-        pic[108] = './img/109.png';
-        pic[109] = './img/110.png';
-        pic[110] = './img/111.png';
-        pic[111] = './img/112.png';
-        pic[112] = './img/113.png';
-        pic[113] = './img/114.png';
-        pic[114] = './img/115.png';
-        pic[115] = './img/116.png';
-        pic[116] = './img/117.png';
-        pic[117] = './img/118.png';
-        pic[118] = './img/119.png';
-        pic[119] = './img/120.png';
-        pic[120] = './img/121.png';
-        pic[121] = './img/122.png';
-        pic[122] = './img/123.png';
-        pic[123] = './img/124.png';
-        pic[124] = './img/125.png';
-        pic[125] = './img/126.png';
-        pic[126] = './img/127.png';
-        pic[127] = './img/128.png';
-        pic[128] = './img/129.png';
-        pic[129] = './img/130.png';
-        pic[130] = './img/131.png';
-        pic[131] = './img/132.png';
-        pic[132] = './img/133.png';
-        pic[133] = './img/134.png';
-        pic[134] = './img/135.png';
-        pic[135] = './img/136.png';
-        pic[136] = './img/137.png';
-        pic[137] = './img/138.png';
-        pic[138] = './img/139.png';
-        pic[139] = './img/140.png';
-        pic[140] = './img/141.png';
-        pic[141] = './img/142.png';
-        pic[142] = './img/143.png';
-        pic[143] = './img/144.png';
-        pic[144] = './img/145.png';
-        pic[145] = './img/146.png';
-        pic[146] = './img/147.png';
-        pic[147] = './img/148.png';
-        pic[148] = './img/149.png';
-        pic[149] = './img/150.png';
-        pic[150] = './img/151.png';
-        pic[151] = './img/152.png';
-        pic[152] = './img/153.png';
-        pic[153] = './img/154.png';
-        pic[154] = './img/155.png';
-        pic[155] = './img/156.png';
-        pic[156] = './img/157.png';
-        pic[157] = './img/158.png';
-        pic[158] = './img/159.png';
-        pic[159] = './img/160.png';
-        pic[160] = './img/161.png';
-        pic[161] = './img/162.png';
-        pic[162] = './img/163.png';
-        pic[163] = './img/164.png';
-        pic[164] = './img/165.png';
-        pic[165] = './img/166.png';
-        pic[166] = './img/167.png';
-        pic[167] = './img/168.png';
-        pic[168] = './img/169.png';
-        pic[169] = './img/170.png';
-        pic[170] = './img/171.png';
-        pic[171] = './img/172.png';
-        pic[172] = './img/173.png';
-        pic[173] = './img/174.png';
-        pic[174] = './img/175.png';
-        pic[175] = './img/176.png';
-        pic[176] = './img/177.png';
-        pic[177] = './img/178.png';
-        pic[178] = './img/179.png';
-        
-        parseInt (Math.random()*(pic.length),180);
-        var choose = Math.floor(Math.random()*(pic.length));
-        document.write('<img src="' + pic[choose] + '">' );
-    </script>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <div class="content" style="display: none;">
+        <div class="counter">还有大病：<span id="remainingCount">2</span></div>
+        <div class="cards-container">
+            <div class="card" id="card1">
+                <img src="img/1.png" alt="Image 1">
+                <div class="text">
+                    <h2>肾小管上皮细胞浊肿1</h2>
+                    <p>取材与全景观察:长条形组织一块，可见一些散在蓝色小球及许多小管，显示为肾组织。局部观察:低倍观察肾小球及肾小管，确定为肾组织。在肾小球旁边可见近端肾曲小管，其管腔变窄。高倍观察近端肾曲小管上皮细胞肿胀，胞浆着伊红细颗粒状，颗粒大小较一致，一部分胞浆崩解脱落入曲管腔内，上皮细胞的核结构清晰，未见坏死。注：近曲小管的上皮细胞崩解，胞浆流出。
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="card2">
+                <img src="img/2.png" alt="Image 2">
+                <div class="text">
+                    <h2>肝细胞脂肪变性1</h2>
+                    <p>取材与全景观察:红色，方形组织一块。局部观察:低倍观察，肝小叶结构完整，为肝组织。高倍观察，在每个肝小叶的许多肝细胞浆内均可见多个圆形空沟，空泡大小不一，边界清楚，小叶外围空泡较大，而且较多，这些空泡原为脂肪滴，在制作切片过程中被有机溶剂溶去，乃成空泡。空泡较大时肝细胞核常被挤在一侧，肝血窦也受压。注：肝细胞内存在脂肪空泡。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card3">
+                <img src="img/3.png" alt="Image 3">
+                <div class="text">
+                    <h2>肾小球入球细动脉玻璃样变1</h2>
+                    <p>取材与全景观察:略方形组织，取自原发性高血压患者的肾。局部观察:低倍观察，大部分组织为肾脏皮质，少部分为髓质。高倍观察，绝大部分肾小球及肾小管无明显改变，只有少数肾小球呈红染，均质状(玻璃样变)，其中见少数细胞核，但不见肾小球的正常结构，该肾小球所属的肾小管萎缩，间质有少数淋巴细胞浸润肾小球，结果会发现有少数肾小球(特别是发生玻璃样变的)入球细动脉的壁呈明显增厚，管腔变窄管腔内侧仍见内皮细胞。在高倍观察可见增厚的管壁由红染、同质状物质组成，未见细胞核，位于内皮细胞与平滑肌(平滑肌可只是一层)之间，这就是血管壁的玻璃样变。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card4">
+                <img src="img/4.png" alt="Image 4">
+                <div class="text">
+                    <h2>肾压迫性萎缩（肾萎缩）</h2>
+                    <p>肾脏体积增大、切面见肾盂，肾盏明显扩张，肾皮质萎缩变薄，甚至变薄如纸，皮髓质分界不清。注：肾脏是实质性器官，空腔显示为病变处存在积液，制作成标本后流出。</p>
+                </div>
+            </div>
+            <div class="card" id="card5">
+                <img src="img/5.png" alt="Image 5">
+                <div class="text">
+                    <h2>脑萎缩</h2>
+                    <p>脑回变窄，脑沟变宽加深</p>
+                </div>
+            </div><div class="card" id="card6">
+                <img src="img/6.png" alt="Image 6">
+                <div class="text">
+                    <h2>高血压性心脏病（心室肥大、心腔扩大）</h2>
+                    <p>心脏体积显著增大，左心室室壁增厚约2cm（正常1 cm），左心腔扩张不明显</p>
+                </div>
+            </div><div class="card" id="card7">
+                <img src="img/7.png" alt="Image 7">
+                <div class="text">
+                    <h2>肝脂肪变性</h2>
+                    <p>肝脏体积增大，淡黄色，边缘圆钝，切面有油腻感</p>
+                </div>
+            </div><div class="card" id="card8">
+                <img src="img/8.png" alt="Image 8">
+                <div class="text">
+                    <h2>脑液化性坏死（脑软化）</h2>
+                    <p>大脑冠状切面，内囊附近的脑组织发生液化性坏死，坏死灶由于坏死组织液化后脱失，仅残留疏松网状结构。</p>
+                </div>
+            </div><div class="card" id="card9">
+                <img src="img/9.png" alt="Image 9">
+                <div class="text">
+                    <h2>阿米巴肝脓肿（肝液化性坏死、肝脓肿）</h2>
+                    <p>肝脏右叶切面见一个巨大脓腔，腔内含半流质的棕褐色果酱样物（标本切开后流失），脓肿壁粗糙不平，有未彻底液化坏死的结缔组织、血管及胆管附着，呈破絮状外观。</p>
+                </div>
+            </div><div class="card" id="card10">
+                <img src="img/10.png" alt="Image 10">
+                <div class="text">
+                    <h2>肾干酪样坏死（肾结核，看不出来也可以答“干酪样坏死”）</h2>
+                    <p>肾体积明显增大，切面见多个大片黄白色，质地细腻的坏死物质，该坏死物质似奶酪。</p>
+                </div>
+            </div><div class="card" id="card11">
+                <img src="img/11.png" alt="Image 11">
+                <div class="text">
+                    <h2>右手干性坏疽</h2>
+                    <p>右手全部坏死、干燥、灰黑色，皱缩，表皮部分剥脱，坏死组织与正常组织分界线清楚。</p>
+                </div>
+            </div><div class="card" id="card12">
+                <img src="img/12.png" alt="Image 12">
+                <div class="text">
+                    <h2>坏疽性阑尾炎（阑尾湿性坏疽）</h2>
+                    <p>阑尾肿胀变粗，呈暗黑色，阑尾浆膜面覆盖一层灰黄色炎性渗出物。切面见管壁显著增厚、层次不清，有一处已穿孔。注：这是本课程阑尾炎的唯一疾病。
+                        </p>
+                </div>
+            </div><div class="card" id="card13">
+                <img src="img/13.png" alt="Image 13">
+                <div class="text">
+                    <h2>混合型血栓1</h2>
+                    <p>深红色为红细胞，浅红颗粒状无细胞形态是崩解的血小板小梁 全景 取材与全景观察:取自静脉内血栓凝块，红色及浅红色条状物，深红色与浅红色交错存在。</p>
+                </div>
+            </div><div class="card" id="card14">
+                <img src="img/14.png" alt="Image 14">
+                <div class="text">
+                    <h2>混合型血栓1</h2>
+                    <p>深蓝色的细胞核是中性粒细胞，丝网状为纤维素 ×250 局部观察:深红色部分为红细胞集群，浅红色部分呈颗粒状，为崩解的血小板组成的小梁，纵横交错。小梁边缘见不少中性白细胞及一些淋巴细胞。小梁间为浅红染细丝状的纤维素，呈网状，其间有一些红细胞及白细胞，除上述所外，不见其他组织。</p>
+                </div>
+            </div><div class="card" id="card15">
+                <img src="img/15.png" alt="Image 15">
+                <div class="text">
+                    <h2>子宫颈息肉伴鳞状上皮化生1 ×800</h2>
+                    <p>全景观察:切片为息肉状组织一条，染色偏蓝。取材与局部观察:组织取自子宫颈息肉。低倍观察，子官颈息肉组织表面多数被以一层高柱状上皮,是分泌粘液的细胞，此为高柱状上皮;高倍观察，部分高柱状上皮被复层鳞状细胞所代替,有的部分可见高柱状上皮之下为鳞状细胞。此外,部分腺腔的柱状上皮细胞亦为复层鳞状上皮细胞所代替，间质血管充血，并见散在淋巴细胞、浆细胞及中性粒细胞浸润。
+                        </p>
+                </div>
+            </div><div class="card" id="card16">
+                <img src="img/16.png" alt="Image 16">
+                <div class="text">
+                    <h2>肉芽组织（愈合皮肤创面1） ×250</h2>
+                    <p>取材与全景观察:椭圆形浅红染的组织一块。局部观察:低倍观察，切片是一块淡染、细胞少、纤维多的新生组织。其表面，一部分由复层鳞状上皮所被复，另一部分表面暴露，形成了溃疡面，其中隐约可以认出数个稍向表面突出的“肉芽”。 高倍观察，在整个组织内，见许多新生的毛细血管聚集成堆，其间有丰富的，含有纤维母细胞、纤维细胞及胶原纤维的组织;溃疡面的“肉芽”可见较粗的和新生的毛细血管，有平行地向表面垂直生长的趋势。在毛细管之间，可见许多不同类型的细胞浸润，在靠近表面，以多形核白细胞为主，仅有少许巨噬细胞，稍向基部，则多见浆细胞与淋巴细胞;在靠近肉芽的基部，则可以找到纤维母细胞，成熟的纤维细胞以及红染的胶原纤维，这里多形核白细胞很少。这种由新生的毛细血管、纤维母细胞和炎症细胞构成的组织，称为肉芽组织。新生毛细血管的特征是:管较粗而壁厚，管腔狭窄，有的看不见管腔，内皮细胞的核较粗大而淡染，有时可见从内皮细胞垂直向外伸出尖的、实心的毛细血管芽;有的毛细血管互相连接成网，小静脉管壁粗大。在肉芽组织的基底部，血管减少纤维母细胞、纤维细胞与胶原纤维成份增加，这是肉芽组织演变成瘢痕组织的过程。注：有鳞状上皮在角质层之下。鲜红的部分为出血的组织，靠近边缘的地方有较多毛细血管（空腔）和纤维。
+                        </p>
+                </div>
+            </div><div class="card" id="card17">
+                <img src="img/17.png" alt="Image 17">
+                <div class="text">
+                    <h2>慢性肺淤血</h2>
+                    <p>肺体积增大，肺包膜增厚；切面质地实而硬，呈褐色，可见散在的铁锈色斑点。（肺组织内的散在黑色斑点为炭末沉积所致。）</p>
+                </div>
+            </div><div class="card" id="card18">
+                <img src="img/4.png" alt="Image 4">
+                <div class="text">
+                    <h2>慢性肝淤血</h2>
+                    <p>肝体积略增大，表面及切面可见多数暗红色小点或条纹，有的互相连接成网状，暗红色小点或条纹之间的肝实质呈黄色，红黄相间，酷似槟榔的切面，故又称槟榔肝。注：暗红色指新鲜标本，经过福尔马林固定之后成黑色，描述时需要描述新鲜标本。如考察本题为“槟榔肝”需要先写出“慢性肝淤血”。
+                        </p>
+                </div>
+            </div><div class="card" id="card119">
+                <img src="img/19.png" alt="Image 19">
+                <div class="text">
+                    <h2>动脉内血栓</h2>
+                    <p>腹主动脉与骼动脉分叉处，内膜上附着—蛹形固体物，此物与动脉壁连结紧密，灰白间杂有黑色，干燥，表面粗糙，有细小波纹</p>
+                </div>
+            </div><div class="card" id="card20">
+                <img src="img/20.png" alt="Image 20">
+                <div class="text">
+                    <h2>静脉混合血栓</h2>
+                    <p>静脉一段，已剖开，管腔内有一个与血管内腔形状一致的固体物充塞，充满整个管腔，表面干燥而粗糙，无光泽，部分区域呈暗褐色与灰白色相间的条纹状或层网状结构。</p>
+                </div>
+            </div>
+            <div class="card" id="card21">
+                <img src="img/21.png" alt="Image 21">
+                <div class="text">
+                    <h2>脾贫血性梗死</h2>
+                    <p>脾脏的切面上，被膜下有一呈三角形（立体为锥形）、灰白色病灶，其尖端指向脾门，底向被膜，微隆起。边界清楚，呈红褐色，为充血出血带。</p>
+                </div>
+            </div>
+            <div class="card" id="card22">
+                <img src="img/22.png" alt="Image 22">
+                <div class="text">
+                    <h2>心肌梗死</h2>
+                    <p>左心室壁冠状切面可见病灶呈灰白色，无光泽，肌纹理模糊，质较硬、干燥，不规则。心外膜可见冠状动脉的横切面，管壁增厚，腔显著狭窄。</p>
+                </div>
+            </div>
+            <div class="card" id="card23">
+                <img src="img/23.png" alt="Image 23">
+                <div class="text">
+                    <h2>肺出血性梗死</h2>
+                    <p>为—侧肺脏。整个肺脏变实，呈暗红色。切面上有一呈三角形、深红色病灶，尖端指向肺门。底向被膜，与周围组织界限清楚。</p>
+                </div>
+            </div>
+            <div class="card" id="card24">
+                <img src="img/24.png" alt="Image 24">
+                <div class="text">
+                    <h2>肠出血性梗死</h2>
+                    <p>病变肠段呈暗黑色，肠壁因瘀血、水肿和出血而明显增厚，与正常肠壁界限不清楚，病变区域失去光泽。病变肠管一端可见蛔虫。注：考虑患者蛔虫堵塞肠道导致的长梗死。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card25">
+                <img src="img/25.png" alt="Image 25">
+                <div class="text">
+                    <h2>脑出血</h2>
+                    <p>双侧脑切有多个出血灶，形成血肿，腔内充满暗红色血凝块</p>
+                </div>
+            </div>
+            <div class="card" id="card26">
+                <img src="img/26.png" alt="Image 26">
+                <div class="text">
+                    <h2>肝慢性静脉性被动性充血1 ×250</h2>
+                    <p>取材与全景观察:死于右心衰竭患者的肝脏组织，长方形，其间有不少大小不等的腔隙。 注：肝索完整，肝血窦内充斥着大量红细胞，标志着淤血。部分肝细胞内有脂肪空泡，标志着肝组织脂肪变性。</p>
+                </div>
+            </div>
+            <div class="card" id="card27">
+                <img src="img/27.png" alt="Image 27">
+                <div class="text">
+                    <h2>肝慢性静脉性被动性充血1 ×2000</h2>
+                    <p>局部观察:低倍图像现红篮相间条索或小岛状，其中小的腔隙为红色部分所包绕,像似槟榔切面。肝小叶轮廓仍可辨认，中央静脉扩张，其腔内中空，无血细胞。肝小叶中央区及中间带均呈红色，这部分肝细胞索几不可见，只见少数散在星状细胞，其它部分肝细胞索可见，并见有门管区、肝动脉分支、门静脉分支及小胆管，肝细胞索间尚可见卖壁，部分披以星状细胞。高倍图像，小叶中央区及中间带绝大部分肝细胞红染，核不见，为坏死组织。有的肝细胞轮廓仍可辨认，肝血窦明显扩张，充满红细胞。星状细胞完好。小叶周围的肝细胞脂肪变。这就是肝小叶中央及中间带淤血引起的病变。注：肝索完整，肝血窦内充斥着大量红细胞，标志着淤血。部分肝细胞内有脂肪空泡，标志着肝组织脂肪变性。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card28">
+                <img src="img/28.png" alt="Image 28">
+                <div class="text">
+                    <h2>慢性肺淤血及水肿1 全景</h2>
+                    <p>取材与全景观察:取自死于急性左心衰竭患者的肺组织，长方形浅红色，见许多大小不一的腔隙。</p>
+                </div>
+            </div>
+            <div class="card" id="card29">
+                <img src="img/29.png" alt="Image 29">
+                <div class="text">
+                    <h2>慢性肺淤血及水肿1 ×250</h2>
+                    <p>镜下观察:低倍观察，有的小腔中空，有的小腔内有浅红物质。放大观察，切片中见小支气管，其黏膜上皮大部分已脱落入腔内。整个切片的肺泡壁毛细血管均明显扩大，其腔内充满红细胞。大多数肺泡腔内充满浅红染物质(与正常肺泡腔比较)，小支气管腔内也偶有存在，系含少量蛋白质液体。部分肺泡见少数单核细胞，有的肺泡腔为因含多量空气而扩张，融合成大泡。肺泡壁及肺内可见一些棕黑色颗粒物为福马林色素，非病变，是组织固定过程中的产物。注：多数肺部空腔中存在红染，为水肿液。肺泡周围存在大量无核细胞，为红细胞，标志存在淤血。</p>
+                </div>
+            </div>
+            <div class="card" id="card30">
+                <img src="img/30.png" alt="Image 30">
+                <div class="text">
+                    <h2>慢性肺淤血及水肿1 ×600</h2>
+                    <p>镜下观察:低倍观察，有的小腔中空，有的小腔内有浅红物质。放大观察，切片中见小支气管，其黏膜上皮大部分已脱落入腔内。整个切片的肺泡壁毛细血管均明显扩大，其腔内充满红细胞。大多数肺泡腔内充满浅红染物质(与正常肺泡腔比较)，小支气管腔内也偶有存在，系含少量蛋白质液体。部分肺泡见少数单核细胞，有的肺泡腔为因含多量空气而扩张，融合成大泡。肺泡壁及肺内可见一些棕黑色颗粒物为福马林色素，非病变，是组织固定过程中的产物。注：多数肺部空腔中存在红染，为水肿液。肺泡周围存在大量无核细胞，为红细胞，标志存在淤血。</p>
+                </div>
+            </div>
+            <div class="card" id="card31">
+                <img src="img/31.png" alt="Image 31">
+                <div class="text">
+                    <h2>慢性肺淤血及水肿1 ×2000</h2>
+                    <p>镜下观察:低倍观察，有的小腔中空，有的小腔内有浅红物质。放大观察，切片中见小支气管，其黏膜上皮大部分已脱落入腔内。整个切片的肺泡壁毛细血管均明显扩大，其腔内充满红细胞。大多数肺泡腔内充满浅红染物质(与正常肺泡腔比较)，小支气管腔内也偶有存在，系含少量蛋白质液体。部分肺泡见少数单核细胞，有的肺泡腔为因含多量空气而扩张，融合成大泡。肺泡壁及肺内可见一些棕黑色颗粒物为福马林色素，非病变，是组织固定过程中的产物。注：多数肺部空腔中存在红染，为水肿液。肺泡周围存在大量无核细胞，为红细胞，标志存在淤血。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card32">
+                <img src="img/32.png" alt="Image 32">
+                <div class="text">
+                    <h2>慢性肺淤血及水肿2</h2>
+                    <p>注：主要表现为肺泡内出现大量红细胞，可能的临床表现为咯血</p>
+                </div>
+            </div>
+            <div class="card" id="card33">
+                <img src="img/33.png" alt="Image 33">
+                <div class="text">
+                    <h2>急性蜂窝组织阑尾炎1 全景</h2>
+                    <p>取材与全景观察：长方形红染组织一块，可见该组织为空腔性器官，并具有明显的分层。局部观察：从外向内低倍观察，该组织的红染部分有明显分层，具有浆膜层、肌层、黏膜下层、黏膜层四层，固有层淋巴组织丰富见淋巴滤泡，肠腺稀少，初步判断为阑尾。从内向外高倍观察，空腔内可见大量红染的核分叶的中性粒细胞与淋巴细胞构成的大量脓细胞，还有少量红细胞。黏膜层也可见大量脓细胞，固有层中部分淋巴细胞结构完整，部分淋巴滤泡已经崩解，边缘不明显。黏膜下层、肌层、浆膜层等均弥散有大量红染的脓细胞，与周围组织界限不清。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card34">
+                <img src="img/34.png" alt="Image 34">
+                <div class="text">
+                    <h2>急性蜂窝组织阑尾炎1 ×50</h2>
+                    <p>部分淋巴滤泡崩解，边缘不清晰</p>
+                </div>
+            </div>
+            <div class="card" id="card35">
+                <img src="img/35.png" alt="Image 35">
+                <div class="text">
+                    <h2>急性蜂窝组织阑尾炎1 ×100</h2>
+                    <p>有完整的淋巴滤泡</p>
+                </div>
+            </div>
+            <div class="card" id="card36">
+                <img src="img/36.png" alt="Image 36">
+                <div class="text">
+                    <h2>急性蜂窝组织阑尾炎1 ×1000</h2>
+                    <p>浆膜层见大量中性粒细胞</p>
+                </div>
+            </div>
+            <div class="card" id="card37">
+                <img src="img/37.png" alt="Image 37">
+                <div class="text">
+                    <h2>急性蜂窝组织阑尾炎1 ×1000</h2>
+                    <p>肌层见大量中性粒细胞</p>
+                </div>
+            </div>
+            <div class="card" id="card38">
+                <img src="img/38.png" alt="Image 38">
+                <div class="text">
+                    <h2>急性蜂窝组织阑尾炎1 ×1000</h2>
+                    <p>阑尾腔内见大量中性粒细胞与淋巴细胞 </p>
+                </div>
+            </div>
+            <div class="card" id="card39">
+                <img src="img/39.png" alt="Image 39">
+                <div class="text">
+                    <h2>纤维素性心包炎伴机化1 全景</h2>
+                    <p>左侧是心肌，中间是心外膜与肉芽组织等，右侧红染无结构的物质是纤维素渗出 取材与全景观察：长方形红染组织一块，中间由一上下斜行的蓝色条带分割成左右两部分。局部观察：低倍观察，左侧红染部分是肌组织，中间斜行的双蓝色条带位密集的细胞和纤维组织，右侧部分组织呈条状、不规则走向的红染网状物质。高倍观察，左侧大部分为心肌组织，中间斜行的蓝色条带贴近心肌一侧，由疏松结缔组织构成，属于心外膜，其间皮细胞已完全变性和脱落，这里可见较多的淋巴细胞，少数多形核白细胞的浸润(急性炎症已过去);靠右侧部分的蓝色条带为一层含有许多新生毛细血管及纤维母细胞的肉芽组织层，其中亦有炎细胞浸润;右侧部分的大部，呈条索状、不规则走向的红染网状物质，与炎细胞等渗混在一起，这是由纤维素和其他渗出物构成的，其表面有少数呈条状的细小突起(肉眼上呈绒毛状)。在切片的一端假膜脱落了，露出了其下的肉芽组织层。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card40">
+                <img src="img/40.png" alt="Image 40">
+                <div class="text">
+                    <h2>纤维素性心包炎伴机化1 ×400</h2>
+                    <p>左侧心外膜。右侧肉芽组织中存在毛细血管腔，也有呈条索状已经闭合的毛细血管</p>
+                </div>
+            </div>
+            <div class="card" id="card41">
+                <img src="img/41.png" alt="Image 41">
+                <div class="text">
+                    <h2>纤维素性心包炎伴机化1 ×600</h2>
+                    <p>纤维素渗出中包含了大量的中性粒细胞</p>
+                </div>
+            </div>
+            <div class="card" id="card42">
+                <img src="img/42.png" alt="Image 42">
+                <div class="text">
+                    <h2>脑脓肿1 全景</h2>
+                    <p>左上角和侧均有脓肿区 取材与全景观察:长方形组织一块，红染，其内有散在数个、圆形大小不一、蓝色的小灶。局部观察:低倍观察为肝组织，肝小叶结构正常;</p>
+                </div>
+            </div>
+            <div class="card" id="card43">
+                <img src="img/43.png" alt="Image 43">
+                <div class="text">
+                    <h2>脑脓肿1 ×1000</h2>
+                    <p>脓肿区内部有中性粒细胞死亡变成的脓细胞，也可见大量细胞碎片 高倍观察，门管区有少量淋巴细胞及中性白细胞浸润。肝细胞的胞浆内有大小不等的空泡(脂肪变性)。肝组织内散在的多个蓝色小灶的病变基本相同，表现为病灶内的肝组织结构消失，充满中性白细胞及一些坏死肝细胞、星状细胞，而大部分中性白细胞境界不清，胞浆染色深浅不一，核碎裂，浓缩或消失，这些坏死的中性白细胞即脓细胞，上述这种病灶称为脓肿，脓肿周围的肝细胞因受脓液压迫而稍呈萎缩。</p>
+                </div>
+            </div>
+            <div class="card" id="card44">
+                <img src="img/44.png" alt="Image 44">
+                <div class="text">
+                    <h2>结肠腺癌1（恶性） 全景</h2>
+                    <p>取材与全景观察:方形组织蓝染，呈菜花样状。局部观察:低倍观察，为结肠组织，可见部分正常黏膜腺体，腺上皮有大量杯状细胞，黏液分泌亢进，胞浆呈空泡状，核整齐的位于基底部。从正常黏膜向菜花状处观察，正常结肠黏膜突然不见，而为许多不规则腺体，这些腺体占据结肠黏膜层外，还深入黏膜下层，这些腺体排列毫无规则，腺腔大小不一，形状也不相同。高倍观察，每个腺体的细胞层数可1-5层不等，而且细胞排列不整齐，不是正常结肠腺单层整齐的排列，此外，这些腺体的细胞不同于结肠腺的细胞，它较大，胞浆嗜碱性，胞核大，椭圆形，核染色质很丰富，呈粗颗粒状，故染色甚深，也可见到核仁。还可见核分裂像。可见这些细胞是癌细胞。对比之下，从组织学上及细胞学上均与正常结肠腺体不同，有明显的异型性。但仍形成腺管的形态，肿瘤细胞还突破黏膜下层，并侵入了黏膜下层的淋巴管，形成癌栓，腺癌的间质中尚见到纤维组织增生及炎症组织浸润。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card45">
+                <img src="img/45.png" alt="Image 45">
+                <div class="text">
+                    <h2>结肠腺癌1（恶性） ×200</h2>
+                    <p>右侧正常腺体中有呈圆形排列整齐的杯状细胞；左侧肿瘤组织的腺体颜色较正常腺体深（肿瘤细胞核的染色），是由于核质比增大导致的染色质颗粒粗糙造成的</p>
+                </div>
+            </div>
+            <div class="card" id="card46">
+                <img src="img/46.png" alt="Image 46">
+                <div class="text">
+                    <h2>结肠腺癌1（恶性） ×400</h2>
+                    <p>肿瘤组织的腺体增生多层，腺体体腔形态不规则，有明显异型性</p>
+                </div>
+            </div>
+            <div class="card" id="card47">
+                <img src="img/47.png" alt="Image 47">
+                <div class="text">
+                    <h2>结肠腺癌1（恶性） ×600</h2>
+                    <p>少量腺体有共壁现象，有毛细血管在肠腺周围组织中增生</p>
+                </div>
+            </div>
+            <div class="card" id="card48">
+                <img src="img/48.png" alt="Image 48">
+                <div class="text">
+                    <h2>结肠腺癌1（恶性） ×2000</h2>
+                    <p>有部分细胞有两极或三极的不均匀核分裂</p>
+                </div>
+            </div>
+            <div class="card" id="card49">
+                <img src="img/49.png" alt="Image 49">
+                <div class="text">
+                    <h2>平滑肌瘤5（恶性） ×600</h2>
+                    <p>平滑肌自身结构相对明显，横纵切面相互交错，相较于正常平滑肌更加紊乱 </p>
+                </div>
+            </div>
+            <div class="card" id="card50">
+                <img src="img/50.png" alt="Image 50">
+                <div class="text">
+                    <h2>平滑肌瘤5（恶性） ×2000</h2>
+                    <p>平滑肌细胞有异型性，两极不规则核分裂较多，核质比相较于正常平滑肌细胞大</p>
+                </div>
+            </div>
+            <div class="card" id="card51">
+                <img src="img/51.png" alt="Image 51">
+                <div class="text">
+                    <h2>（口腔黏膜）鳞状细胞乳头状瘤1  全景</h2>
+                    <p>低倍镜下可见规则的乳头状突起；右侧连接人体 取材与全景观察:取自口腔黏膜，临床检查为一口腔突起的乳头状新生物。切片的一侧平整，即乳头状新生物切出之基底部，也即该新生物长出处，另一侧则是乳头状突起，也即新生物向表面长出的部分。大部分标本为红色，呈条索或团块状，其中穿插有淡蓝色的间质。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card52">
+                <img src="img/52.png" alt="Image 52">
+                <div class="text">
+                    <h2>（口腔黏膜）鳞状细胞乳头状瘤1 ×400</h2>
+                    <p>肿瘤实质和间质边缘明显</p>
+                </div>
+            </div>
+            <div class="card" id="card53">
+                <img src="img/53.png" alt="Image 53">
+                <div class="text">
+                    <h2>（口腔黏膜）鳞状细胞乳头状瘤1 x600</h2>
+                    <p>可见鱼鳞状排列的细胞，横切面中心为基底层，边缘为角化层 </p>
+                </div>
+            </div>
+            <div class="card" id="card54">
+                <img src="img/54.png" alt="Image 54">
+                <div class="text">
+                    <h2>（口腔黏膜）鳞状细胞乳头状瘤1 x2000</h2>
+                    <p>大部分细胞间可见细胞间桥，证明细胞分化好 高倍观察，乳头中央的间质为纤维组织，富有血管，并可见分支，覆盖其上的为增生的鳞状上皮，且较厚，但其结构似正常鳞状上皮，层次分明，无异型性，最外层见过度角化。乳头的横切面从内到外观察，可见细胞的排列是基底层到棘层及角化层的排列，角化层中可见到核的残余，在间质内为大量纤维结缔组织，其中有不少扩张的血管。大量淋巴细胞及浆细胞浸润，也杂有少量中性多形核粒细胞，这是新生物伴炎症反应的表现。
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="card55">
+                <img src="img/55.png" alt="Image 55">
+                <div class="text">
+                    <h2>高分化鳞癌（片名：皮肤角化鳞状上皮癌1） 全景</h2>
+                    <p>取材与全景观察:方形组织。从溃疡处向下(即向右)观察有浅蓝色条索和小巢向下延伸。</p>
+                </div>
+            </div>
+            <div class="card" id="card56">
+                <img src="img/56.png" alt="Image 56">
+                <div class="text">
+                    <h2>高分化鳞癌（片名：皮肤角化鳞状上皮癌1） x100</h2>
+                    <p>鳞状上皮（紫色）上有角化层（红色）低倍观察，在溃疡两侧为表皮，真皮内偶见少数毛囊及皮脂腺，并可见到立毛肌的平滑肌束，溃疡表面有炎性渗出物被覆，其下真皮及皮下组织中(如全景观察中所见的条索或小巢)，均由细胞组成，细胞巢大小不一，轮廓清楚，但无基底膜的细胞条索或细胞巢颇似角化鳞状上皮团，其中有些细胞巢中央见角化珠。</p>
+                </div>
+            </div>
+            <div class="card" id="card57">
+                <img src="img/57.png" alt="Image 57">
+                <div class="text">
+                    <h2>高分化鳞癌（片名：皮肤角化鳞状上皮癌1） x250</h2>
+                    <p>鳞状上皮下层可见明显的基底层 低倍观察，在溃疡两侧为表皮，真皮内偶见少数毛囊及皮脂腺，并可见到立毛肌的平滑肌束，溃疡表面有炎性渗出物被覆，其下真皮及皮下组织中(如全景观察中所见的条索或小巢)，均由细胞组成，细胞巢大小不一，轮廓清楚，但无基底膜的细胞条索或细胞巢颇似角化鳞状上皮团，其中有些细胞巢中央见角化珠。</p>
+                </div>
+            </div>
+            <div class="card" id="card58">
+                <img src="img/58.png" alt="Image 58">
+                <div class="text">
+                    <h2>高分化鳞癌（片名：皮肤角化鳞状上皮癌1） x100</h2>
+                    <p>鳞状上皮下可见癌巢。癌巢中心可见角化珠 低倍观察，在溃疡两侧为表皮，真皮内偶见少数毛囊及皮脂腺，并可见到立毛肌的平滑肌束，溃疡表面有炎性渗出物被覆，其下真皮及皮下组织中(如全景观察中所见的条索或小巢)，均由细胞组成，细胞巢大小不一，轮廓清楚，但无基底膜的细胞条索或细胞巢颇似角化鳞状上皮团，其中有些细胞巢中央见角化珠。</p>
+                </div>
+            </div>
+            <div class="card" id="card59">
+                <img src="img/59.png" alt="Image 59">
+                <div class="text">
+                    <h2>高分化鳞癌（片名：皮肤角化鳞状上皮癌1） x400</h2>
+                    <p>内部癌细胞似角化层，外部癌细胞似基底层，提示高分化 </p>
+                </div>
+            </div>
+            <div class="card" id="card60">
+                <img src="img/60.png" alt="Image 60">
+                <div class="text">
+                    <h2>高分化鳞癌（片名：皮肤角化鳞状上皮癌1） ×1000</h2>
+                    <p>部分细胞有细胞间桥 高倍观察，每个细胞巢的最外层为排列整齐的低柱状的相似于基底细胞的癌细胞，再向内为厚度不一的细胞层与棘细胞层相似，可以见到细胞间桥，有些在中央见角化珠，这些细胞的层次较乱，不像正常鳞状上皮。一些角化珠可以见到核残留，一些角化灶中还可见到蓝色的钙盐沉着，细胞巢的组成细胞比正常的鳞状上皮细胞大，境界清楚，部分核呈明显异型性，即核大，不规则，深染，另一些则表现为核淡染，核仁肥大清晰，呈红色，见核分裂像，细胞巢间有结缔组织间质，其中可见淋巴细胞浸润。</p>
+                </div>
+            </div>
+            <div class="card" id="card61">
+                <img src="img/61.png" alt="Image 61">
+                <div class="text">
+                    <h2>高分化鳞癌（片名：皮肤角化鳞状上皮癌1） ×600</h2>
+                    <p>正在形成的角化珠</p>
+                </div>
+            </div>
+            <div class="card" id="card62">
+                <img src="img/62.png" alt="Image 62">
+                <div class="text">
+                    <h2>宫颈原位鳞癌1 全景</h2>
+                    <p>左右两侧鳞状上皮已完全成为癌细胞，中间的鳞状上皮两端尚有正常的结构</p>
+                </div>
+            </div>
+            <div class="card" id="card63">
+                <img src="img/63.png" alt="Image 63">
+                <div class="text">
+                    <h2>宫颈原位鳞癌1 x400</h2>
+                    <p>异型鳞状上皮增生累及全层，癌细胞未突破基底层，为原位癌</p>
+                </div>
+            </div>
+            <div class="card" id="card64">
+                <img src="img/64.png" alt="Image 64">
+                <div class="text">
+                    <h2>宫颈原位鳞癌1 ×600</h2>
+                    <p>大量鳞状细胞有多极的和分裂像，核质比明显增大</p>
+                </div>
+            </div>
+            <div class="card" id="card65">
+                <img src="img/65.png" alt="Image 65">
+                <div class="text">
+                    <h2>皮肤乳头状瘤</h2>
+                    <p>肿瘤近于圆形，表面凸凹不平，有多数大小不等的乳头状结节，状如松塔，肿瘤之基底有一小蒂与皮肤相连，切面观察肿瘤向皮肤表面作乳头状增生，其中有结缔组织间质呈轴芯状长入。</p>
+                </div>
+            </div>
+            <div class="card" id="card66">
+                <img src="img/66.png" alt="Image 66">
+                <div class="text">
+                    <h2>家族性腺瘤性息肉病</h2>
+                    <p>结肠黏膜面可见大量带蒂息肉样赘生物，大小较均一，无明显出血坏死。</p>
+                </div>
+            </div>
+            <div class="card" id="card67">
+                <img src="img/67.png" alt="Image 67">
+                <div class="text">
+                    <h2>肠乳头状腺瘤</h2>
+                    <p>作者很神秘什么都没说</p>
+                </div>
+            </div>
+            <div class="card" id="card68">
+                <img src="img/68.png" alt="Image 68">
+                <div class="text">
+                    <h2>卵巢浆液乳头状囊腺瘤</h2>
+                    <p>球形肿物一个，鸡卵大，表面光滑，包膜完整。切面呈囊状，囊壁厚薄不均，一侧囊壁上可见许多突入囊腔的细小乳头状突起。（浆液在制作标本过程中已流出）</p>
+                </div>
+            </div>
+            <div class="card" id="card69">
+                <img src="img/69.png" alt="Image 69">
+                <div class="text">
+                    <h2>卵巢多房性粘液性囊腺瘤</h2>
+                    <p>卵巢增大，大小约16×15cm，切面见卵巢组织不清，可见多个囊腔，囊腔大小不一，囊内充满粘液（固定后呈凝块状）。</p>
+                </div>
+            </div>
+            <div class="card" id="card70">
+                <img src="img/70.png" alt="Image 70">
+                <div class="text">
+                    <h2>皮肤鳞状细胞癌</h2>
+                    <p>皮肤表面见一个菜花样的灰白色肿块，表面可有溃疡形成，切面见肿块向表面呈外生性生长的同时向深部组织呈浸润性生长，边界不清，无包膜，呈灰白色。（右下角的长条形缺口为人为的取样处）</p>
+                </div>
+            </div>
+            <div class="card" id="card71">
+                <img src="img/71.png" alt="Image 71">
+                <div class="text">
+                    <h2>脂肪瘤</h2>
+                    <p>肿物呈卵圆形或分叶状，有完整包膜，黄色，质柔软，油腻感。外观与正常脂肪组织相似。</p>
+                </div>
+            </div>
+            <div class="card" id="card72">
+                <img src="img/72.png" alt="Image 72">
+                <div class="text">
+                    <h2>多发性子宫平滑肌瘤</h2>
+                    <p>子宫体不规则增大，切面见肌层或黏膜下、浆膜下有多个大小不等的结节，结节境界清楚，圆形或椭圆形，切面灰白，编织状或漩涡状。</p>
+                </div>
+            </div>
+            <div class="card" id="card73">
+                <img src="img/73.png" alt="Image 73">
+                <div class="text">
+                    <h2>恶性黑色素瘤</h2>
+                    <p>足跟部可见一肿块，大小约10×7cm，椭圆形，灰黑色，表面高低不平，切面黑色。</p>
+                </div>
+            </div>
+            <div class="card" id="card74">
+                <img src="img/74.png" alt="Image 74">
+                <div class="text">
+                    <h2>畸胎瘤（囊性）</h2>
+                    <p>球形肿物一个，包膜完整，切面呈囊状，可见毛发、淡黄色皮脂腺分泌物。</p>
+                </div>
+            </div>
+            <div class="card" id="card75">
+                <img src="img/75.png" alt="Image 75">
+                <div class="text">
+                    <h2>畸胎瘤（实性）</h2>
+                    <p>肿物一个，形态不规则，成份较复杂，有处为灰白色纤维组织区，有处为淡黄色神经组织区，有处可见不整形腔隙即腺组织，有处呈囊状。</p>
+                </div>
+            </div>
+            <div class="card" id="card76">
+                <img src="img/76.png" alt="Image 76">
+                <div class="text">
+                    <h2>冠状动脉粥样硬化6 全景</h2>
+                    <p>全景观察：方形红染组织一块，有大量心肌组织，其中部偏下部有一较大管腔。</p>
+                </div>
+            </div>
+            <div class="card" id="card77">
+                <img src="img/77.png" alt="Image 77">
+                <div class="text">
+                    <h2>冠状动脉粥样硬化6 ×600</h2>
+                    <p>局部观察：低倍观察，冠状动脉血管壁明显增厚，管腔狭窄，分层不明显。</p>
+                </div>
+            </div><div class="card" id="card78">
+                <img src="img/78.png" alt="Image 78">
+                <div class="text">
+                    <h2>冠状动脉粥样硬化6 ×800</h2>
+                    <p>高倍观察可见冠状动脉内膜增厚并有脂质沉积，病灶处的内膜下有大量的泡沫细胞聚集，泡沫细胞体积大，呈圆形或椭圆形，胞质内含大量的小气泡，核小深染。有较多向管腔内凸起的纤维帽结构，由增生的胶原纤维形成，之下含有少量胆固醇结晶（针状空隙）。</p>
+                </div>
+            </div>
+            <div class="card" id="card79">
+                <img src="img/79.png" alt="Image 79">
+                <div class="text">
+                    <h2>冠状动脉粥样硬化 ×200</h2>
+                    <p>作者很神秘什么都没说</p>
+                </div>
+            </div>
+            <div class="card" id="card80">
+                <img src="img/80.png" alt="Image 80">
+                <div class="text">
+                    <h2>冠状动脉粥样硬化 ×250</h2>
+                    <p>作者很神秘什么都没说</p>
+                </div>
+            </div>
+            <div class="card" id="card81">
+                <img src="img/81.png" alt="Image 81">
+                <div class="text">
+                    <h2>主动脉粥样硬化</h2>
+                    <p>主动脉内膜有大量隆起的不规则形灰白或灰黄色斑块，部分斑块可见出血或斑块破溃形成溃疡（粥样斑块期伴复合性病变）。</p>
+                </div>
+            </div>
+            <div class="card" id="card82">
+                <img src="img/82.png" alt="Image 82">
+                <div class="text">
+                    <h2>主动脉粥样硬化</h2>
+                    <p>主动脉内膜不光滑，可见多个大小不等、形状不整、凸凹不平，隆起于内膜的黄白色、灰白色或蜡滴样斑块，此斑块在肋间动脉开口处更为明显。有的斑块破溃形成溃疡，有的斑块钙化呈灰白色，较硬。</p>
+                </div>
+            </div>
+            <div class="card" id="card83">
+                <img src="img/83.png" alt="Image 83">
+                <div class="text">
+                    <h2>冠状动脉粥样硬化</h2>
+                    <p>左冠状动脉前降支横断面上可见血管壁呈新月形增厚，管腔呈偏心性狭窄。同时可见主动脉弓也呈粥样硬化改变</p>
+                </div>
+            </div>
+            <div class="card" id="card84">
+                <img src="img/84.png" alt="Image 84">
+                <div class="text">
+                    <h2>心肌梗死</h2>
+                    <p>左心室壁冠状切面可见病灶呈灰白色，无光泽，肌纹理模糊，质较硬、干燥，不规则。心外膜可见冠状动脉的横切面，管壁增厚，腔显著狭窄。</p>
+                </div>
+            </div>
+            <div class="card" id="card85">
+                <img src="img/85.png" alt="Image 85">
+                <div class="text">
+                    <h2>高血压性心脏病心肌肥厚</h2>
+                    <p>心脏体积增大，左心室壁显著增厚，约2cm，乳头肌和肉柱增粗变圆；左心室腔缩小，心瓣膜光滑、菲薄、半透明。</p>
+                </div>
+            </div>
+            <div class="card" id="card86">
+                <img src="img/86.png" alt="Image 86">
+                <div class="text">
+                    <h2>颗粒性固缩肾</h2>
+                    <p>已切开之肾脏，体积缩小，表面呈弥漫细颗粒状。切面灰白，实质萎缩变薄，条纹不清，皮髓质分界不清，肾盂脂肪增多。</p>
+                </div>
+            </div>
+            <div class="card" id="card87">
+                <img src="img/87.png" alt="Image 87">
+                <div class="text">
+                    <h2>脑出血</h2>
+                    <p>在大脑冠状切面上，于—侧的内囊部可见有一大片血凝块。并已突破例脑室。</p>
+                </div>
+            </div>
+            <div class="card" id="card88">
+                <img src="img/88.png" alt="Image 88">
+                <div class="text">
+                    <h2>二尖瓣狭窄</h2>
+                    <p>二尖瓣(或主动脉瓣)明显纤维性增厚，瓣膜变形、卷曲或相互粘连，造成瓣膜口狭窄或关闭不全。</p>
+                </div>
+            </div>
+            <div class="card" id="card89">
+                <img src="img/89.png" alt="Image 89">
+                <div class="text">
+                    <h2>急性风湿性心内膜炎</h2>
+                    <p>在二尖瓣闭锁缘上，可见单行排列、粟粒大小、灰白色，与瓣膜粘连紧密的赘生物。瓣膜无异常改变。</p>
+                </div>
+            </div>
+            <div class="card" id="card90">
+                <img src="img/90.png" alt="Image 90">
+                <div class="text">
+                    <h2>急性感染性心内膜炎（细菌性心内膜炎）</h2>
+                    <p>二尖瓣或主动脉瓣上附着多个较大的不规则灰红色赘生物，表面粗糙，部分赘生物已脱落形</p>
+                </div>
+            </div>
+            <div class="card" id="card91">
+                <img src="img/91.png" alt="Image 91">
+                <div class="text">
+                    <h2>心肌梗死机化后瘢痕组织形成1 全景</h2>
+                    <p>取材与全景观察:组织取自冠心病死者的左心室心肌，切片为长方形红染组织，中央可见一淡染的区域。</p>
+                </div>
+            </div>
+            <div class="card" id="card92">
+                <img src="img/92.png" alt="Image 92">
+                <div class="text">
+                    <h2>心肌梗死机化后瘢痕组织形成1 x100</h2>
+                    <p>心脏中的瘢痕组织 局部观察:低倍，心内膜呈纤维增厚，心内膜下心肌纤维肥大，其它各处心肌纤维大部分正常。全景观察所见切片中央浅红染区域，高倍观察下不见心肌组织而为纤维组织所取代，而且部分呈玻璃样变，其中靠近心肌组织处可见少数心肌纤维为瘢痕组织包绕，增生的纤维组织还伸向邻近心肌纤维之间。此外，有一些心肌纤维之间也出现瘢痕小灶，部分心肌纤维横纹不清，肌浆有轻度凝聚现象。</p>
+                </div>
+            </div>
+            <div class="card" id="card93">
+                <img src="img/93.png" alt="Image 93">
+                <div class="text">
+                    <h2>风湿性心内膜炎3 全景</h2>
+                    <p>取材与全景观察:环形、不规则组织一块，呈红染。</p>
+                </div>
+            </div>
+            <div class="card" id="card94">
+                <img src="img/94.png" alt="Image 94">
+                <div class="text">
+                    <h2>风湿性心内膜炎3 x200</h2>
+                    <p>心肌和心外膜下少有阿少夫小体，主要见于心内膜下 低倍观察，为心肌组织，多呈横切面，无明显病变。</p>
+                </div>
+            </div>
+            <div class="card" id="card95">
+                <img src="img/95.png" alt="Image 95">
+                <div class="text">
+                    <h2>风湿性心内膜炎3 x1000</h2>
+                    <p>阿少夫小体与鸟眼样细胞 高倍观察，病变主要见于心内膜，心内膜内皮细胞肿胀增生，内膜下结缔组织中散在由多个细胞组成的梭形病灶。组成病灶的细胞呈梭形或椭圆形，胞浆丰富，嗜碱性，核大核膜清晰，核染色质聚集成团，这种细胞称为风湿细胞或称阿少夫细胞。由此种细胞所构成之结节称为风湿小结，或Aschoff氏小结。在有的切片中，个别风湿小结中仍见到少许纤维素样变组织为红染、破碎、颗粒状组织，即坏死的胶原。风湿性小结为风湿病的特征病变，这些风湿小结除在内膜较集中外，有的切片也可见之于心肌间质的血管这周围。</p>
+                </div>
+            </div>
+            <div class="card" id="card96">
+                <img src="img/96.png" alt="Image 96">
+                <div class="text">
+                    <h2>风湿性心内膜炎3 x1000</h2>
+                    <p>有少量细胞核分裂为具有双核的细胞 高倍观察，病变主要见于心内膜，心内膜内皮细胞肿胀增生，内膜下结缔组织中散在由多个细胞组成的梭形病灶。组成病灶的细胞呈梭形或椭圆形，胞浆丰富，嗜碱性，核大核膜清晰，核染色质聚集成团，这种细胞称为风湿细胞或称阿少夫细胞。由此种细胞所构成之结节称为风湿小结，或Aschoff氏小结。在有的切片中，个别风湿小结中仍见到少许纤维素样变组织为红染、破碎、颗粒状组织，即坏死的胶原。风湿性小结为风湿病的特征病变，这些风湿小结除在内膜较集中外，有的切片也可见之于心肌间质的血管这周围。</p>
+                </div>
+            </div>
+            <div class="card" id="card97">
+                <img src="img/97.png" alt="Image 97">
+                <div class="text">
+                    <h2>大叶性肺炎（红肝变期）</h2>
+                    <p>肺体积增大饱满，部分肺叶变实，表面及切面为红褐色，略呈颗粒状，病变均匀一致，质实如肝。</p>
+                </div>
+            </div>
+            <div class="card" id="card98">
+                <img src="img/98.png" alt="Image 98">
+                <div class="text">
+                    <h2>大叶性肺炎（灰肝变期）</h2>
+                    <p>肺大叶呈弥漫性变实．切面呈灰白色，略呈颗粒状。胸膜表面有纤维蛋白渗出。注：下半部分为病变区域，更像肝脏样。上半部分仍存在较多间隙，为正常组织。</p>
+                </div>
+            </div>
+            <div class="card" id="card99">
+                <img src="img/99.png" alt="Image 99">
+                <div class="text">
+                    <h2>大叶性肺炎1 全景</h2>
+                    <p>取材与全景观察:长方形组织一块，呈淡蓝染色。</p>
+                </div>
+            </div>
+            <div class="card" id="card100">
+                <img src="img/100.png" alt="Image 100">
+                <div class="text">
+                    <h2>大叶性肺炎1 x800</h2>
+                    <p>相邻肺泡腔纤维素通过肺泡间孔而相互连接 高倍观察，在肺组织的全部肺泡腔内均充满大量嗜中性白细胞及红染的纤维素，其间尚有少量的红细胞及单核细胞，有的炎症细胞核已碎裂，甚至消失，只剩下红染的细胞轮廓(炎症细胞的坏死)，有些部分是相邻肺泡腔内的纤维素通过肺泡间孔而互相连接，该孔氏孔间隙增宽，明显可见，整个切片的肺泡腔内渗出物的成份比较一致，肺泡壁无增厚，其中毛细血管充血不明显，这是受渗出物压迫所致，支气管之上皮，多数已脱落，卷缩于管腔内，管壁充血、水肿及少量中性白细胞、单核细胞浸润，管腔内也有同样的渗物。</p>
+                </div>
+            </div>
+            <div class="card" id="card101">
+                <img src="img/101.png" alt="Image 101">
+                <div class="text">
+                    <h2>小叶性肺炎或支气管肺炎1 全景</h2>
+                    <p>病变区域相互独立，不呈弥漫性 取材与全景观察:标本为楔形组织一块，有许多空隙，状若海锦，组织中有散在紫兰色实变区域。</p>
+                </div>
+            </div>
+            <div class="card" id="card102">
+                <img src="img/102.png" alt="Image 102">
+                <div class="text">
+                    <h2>小叶性肺炎或支气管肺炎1 x200</h2>
+                    <p>三个小病灶联合形成的一个病灶，其中包含血管 局部观察:低倍下，可辨识为肺组织。</p>
+                </div>
+            </div>
+            <div class="card" id="card103">
+                <img src="img/103.png" alt="Image 103">
+                <div class="text">
+                    <h2>小叶性肺炎或支气管肺炎1 x1000</h2>
+                    <p>病灶中存在巨噬细胞和呈分叶核样的中性粒细胞 高倍观察，多为细支气管及其周围的肺组织，部分细支气管壁被覆以单层柱状或假复层纤毛柱状上皮，上皮下有时见平滑肌，有的细支气管上皮已脱落，腔内有大量嗜中性白细胞，管壁血管扩张充血，有嗜中性白细胞及少量淋巴、单核细胞浸润。其周围肺泡内充满炎性细胞，某些肺泡壁已破坏，实变区域之间的肺组织(即肉眼所见，呈海绵状者)，肺泡壁充血，肺泡腔内无渗出物，泡腔扩大，泡壁变薄，部分泡壁已断裂相溶合，呈大泡状(代偿性肺气肿)，病变处肺膜也有少量淋巴、单核细胞浸润。</p>
+                </div>
+            </div>
+            <div class="card" id="card104">
+                <img src="img/104.png" alt="Image 104">
+                <div class="text">
+                    <h2>大叶性肺炎3 全景</h2>
+                    <p>肺部已经有实变，为灰色肝样变</p>
+                </div>
+            </div>
+            <div class="card" id="card105">
+                <img src="img/105.png" alt="Image 105">
+                <div class="text">
+                    <h2>大叶性肺炎（灰色肝样变期）1 全景</h2>
+                    <p>取材与全景观察：长方形组织一块，呈淡蓝染色。</p>
+                </div>
+            </div>
+            <div class="card" id="card106">
+                <img src="img/106.png" alt="Image 106">
+                <div class="text">
+                    <h2>大叶性肺炎（灰色肝样变期）1 x1000</h2>
+                    <p>间隙中仅存在少量红细胞 高倍观察，在肺组织的全部肺泡腔内均充满大量嗜中性白细胞及红染的纤维素，其间尚有少量的红细胞及单核细胞，有的炎症细胞核已碎裂，甚至消失，只剩下红染的细胞轮廓(炎症细胞的坏死)，有些部分是相邻肺泡腔内的纤维素通过肺泡间孔而互相连接，该孔氏孔间隙增宽，明显可见，整个切片的肺泡腔内渗出物的成份比较一致，肺泡壁无增厚，其中毛细血管充血不明显，这是受渗出物压迫所致，支气管之上皮，多数已脱落，卷缩于管腔内，管壁充血、水肿及少量中性白细胞、单核细胞浸润，管腔内也有同样的渗物。</p>
+                </div>
+            </div>
+            <div class="card" id="card107">
+                <img src="img/107.png" alt="Image 107">
+                <div class="text">
+                    <h2>矽肺（硅肺）</h2>
+                    <p>肺切面可见多数散在的灰白色粟粒及高梁米粒大小的结节，此即硅结节。其中多数境界清楚，有的融合成较大的硅结节。在结节周围及结节之间有灰白色质地致密的纤维组织。注：黑色不是硅颗粒，可能是由于患者生活中吸入的空气质量较差导致，亦或是吸烟导致。图片中的白色粟粒才是硅肺的病理。
+                        </p>
+                </div>
+            </div>
+            <div class="card" id="card108">
+                <img src="img/108.png" alt="Image 108">
+                <div class="text">
+                    <h2>肺癌（中心型）</h2>
+                    <p>肿瘤位于近肺门处较大支气管，呈灰白色，与正常组织界限不清，呈树根样浸润性生长。</p>
+                </div>
+            </div>
+            <div class="card" id="card109">
+                <img src="img/109.png" alt="Image 109">
+                <div class="text">
+                    <h2>肺癌（周围型）</h2>
+                    <p>肿瘤位于近胸膜的肺周边组织形成孤立的圆形或结节状癌结节，直径5cm，与周围肺组织的界限较清楚，但无包膜。</p>
+                </div>
+            </div>
+            <div class="card" id="card110">
+                <img src="img/110.png" alt="Image 110">
+                <div class="text">
+                    <h2>肺癌（弥漫型）</h2>
+                    <p>肺下叶质地较实，切面灰白色，癌组织弥漫分布，形态类似大叶性肺炎</p>
+                </div>
+            </div>
+            <div class="card" id="card111">
+                <img src="img/111.png" alt="Image 111">
+                <div class="text">
+                    <h2>粟粒性肺结核1 全景</h2>
+                    <p>取材与全景观察:切片为两块方形红染组织，仔细观察则见其中散布着许多紫兰色、直径约1毫米左右的小点。</p>
+                    <p>上皮样细胞:为构成结节的主要成份，彼此聚在一起，胞浆丰富，界限不清楚，胞核染色淡，圆形或椭圆形，核膜薄，偶见核仁。</p>
+                </div>
+            </div>
+            <div class="card" id="card112">
+                <img src="img/112.png" alt="Image 112">
+                <div class="text">
+                    <h2>粟粒性肺结核1 x100</h2>
+                    <p>可见大量的结核结节成团状散在分布。结核结节周围的肺胞腔内，多数有渗出物可见，它们是红染的微尘性的浆液及巨噬细胞，一些肺泡腔内，则见多量的巨噬细胞，这些巨噬细胞，胞浆丰富，有的淡染或空泡状(由于吞噬了脂质)，有的过渡为类上皮细胞的形态，病变处的肺胞壁毛细血管充血。以上病变为结核时见到的渗出性病理变化。结节由以下四种成份构成:</p>
+                    <p>(1)上皮样细胞:为构成结节的主要成份，彼此聚在一起，胞浆丰富，界限不清楚，胞核染色淡，圆形或椭圆形，核膜薄，偶见核仁。</p>
+                    <p>(2)朗格汉斯细胞:为多核巨细胞，核染色深，核多个或数十个，成花环状或马蹄铁状，排列在细胞的周边，胞浆极丰富，每个结节均可见到一至数个巨细胞，常位于结节的干酪样坏死的边缘。</p>
+                    <p>(3)干酪样坏死:位于结节之中心部，为红染坏死组织，伴核碎裂。</p>
+                    <p>(4)淋巴细胞:位于结节之周边部。有的结节周围已有数量不等的纤维组织包绕，此结节为增生性结核的特征性的病理变化，称为结核结节。</p>
+                </div>
+            </div>
+            <div class="card" id="card113">
+                <img src="img/113.png" alt="Image 113">
+                <div class="text">
+                    <h2>粟粒性肺结核1 x600</h2>
+                    <p>结核结节周围存在朗格汉斯细胞 </p>
+                    <p>朗格汉斯细胞:为多核巨细胞，核染色深，核多个或数十个，成花环状或马蹄铁状，排列在细胞的周边，胞浆极丰富，每个结节均可见到一至数个巨细胞，常位于结节的干酪样坏死的边缘。</p>
+                </div>
+            </div>
+            <div class="card" id="card114">
+                <img src="img/114.png" alt="Image 114">
+                <div class="text">
+                    <h2>粟粒性肺结核1 x600</h2>
+                    <p>终末期的结核结节会发展成为干酪样坏死 </p>
+                    <p>干酪样坏死:位于结节之中心部，为红染坏死组织，伴核碎裂。</p>
+                </div>
+            </div>
+            <div class="card" id="card115">
+                <img src="img/115.png" alt="Image 115">
+                <div class="text">
+                    <h2>粟粒性肺结核1 x800</h2>
+                    <p>肺结节周围可见若干朗格汉斯细胞 </p>
+                    <p>朗格汉斯细胞:为多核巨细胞，核染色深，核多个或数十个，成花环状或马蹄铁状，排列在细胞的周边，胞浆极丰富，每个结节均可见到一至数个巨细胞，常位于结节的干酪样坏死的边缘。</p>
+                </div>
+            </div>
+            <div class="card" id="card116">
+                <img src="img/116.png" alt="Image 116">
+                <div class="text">
+                    <h2>肾结核（增值型）1 全景</h2>
+                    <p>上半部分为皮质，下半部分为髓质 取材与全景观察:长方形组织一块，大部分为紫蓝色，其边缘可见直径1毫米的圆形小结，切片右下侧，组织结构不同，红染并有空隙。</p>
+                </div>
+            </div>
+            <div class="card" id="card117">
+                <img src="img/117.png" alt="Image 117">
+                <div class="text">
+                    <h2>肾结核（增值型）1 x200</h2>
+                    <p>少量结节散在分布与皮质部分 局部观察:低倍，为肾组织，皮质部可见多数结核结节，即肉眼所见之圆形小结，结节由类上皮细胞，郎罕氏巨细胞，干酪样坏死及淋巴细胞所构成，多数结节内可见数个郎罕氏巨细胞，单核细胞浸润，甚至可见淋巴小结，某些区域伴有结缔组织增生，肾曲管内含有蛋白管型，切片右下侧为肾盂组织，黏膜由移形上皮被覆，黏膜下面也见结核病变，并见平滑肌及脂肪组织，其间也有单核细胞浸润。</p>
+                </div>
+            </div>
+            <div class="card" id="card118">
+                <img src="img/118.png" alt="Image 118">
+                <div class="text">
+                    <h2>肾结核（增值型）1 x800</h2>
+                    <p>有淋巴细胞浸润与上皮样细胞，尚未形成结节，处于结节早期状态 局部观察:低倍，为肾组织，皮质部可见多数结核结节，即肉眼所见之圆形小结，结节由类上皮细胞，郎罕氏巨细胞，干酪样坏死及淋巴细胞所构成，多数结节内可见数个郎罕氏巨细胞，单核细胞浸润，甚至可见淋巴小结，某些区域伴有结缔组织增生，肾曲管内含有蛋白管型，切片右下侧为肾盂组织，黏膜由移形上皮被覆，黏膜下面也见结核病变，并见平滑肌及脂肪组织，其间也有单核细胞浸润。</p>
+                </div>
+            </div>
+            <div class="card" id="card119">
+                <img src="img/119.png" alt="Image 119">
+                <div class="text">
+                    <h2>肺癌（燕麦细胞癌）2 全景</h2>
+                    <p>深蓝色的部分为肺泡软骨</p>
+                </div>
+            </div>
+            <div class="card" id="card120">
+                <img src="img/120.png" alt="Image 120">
+                <div class="text">
+                    <h2>肺癌（燕麦细胞癌）2 x200</h2>
+                    <p>肺内大部分组织被燕麦细胞所取代</p>
+                </div>
+            </div>
+            <div class="card" id="card121">
+                <img src="img/121.png" alt="Image 121">
+                <div class="text">
+                    <h2>肺癌（燕麦细胞癌）2 x1000</h2>
+                    <p>燕麦细胞类似淋巴细胞，破坏性强，发病率高，辨识度高</p>
+                </div>
+            </div>
+            <div class="card" id="card122">
+                <img src="img/122.png" alt="Image 122">
+                <div class="text">
+                    <h2>毒性甲状腺肿1 全景</h2>
+                    <p>取材与全景观察:方形、红染组织一块。</p>
+                </div>
+            </div>
+            <div class="card" id="card123">
+                <img src="img/123.png" alt="Image 123">
+                <div class="text">
+                    <h2>毒性甲状腺肿1 x200</h2>
+                    <p>大量甲状腺滤泡可见被吸收 （1）滤泡上皮细胞多数仍呈立方或柱状，有的呈乳头状突向滤泡腔（功能高度活动状态的标志）；（2）滤泡腔大小不等，有的滤泡腔内胶质较多红染，（术前碘治疗后复旧），多数滤泡内胶质少淡染，稀薄，胶质边缘有扇形的吸收空泡（功能高度活动状态的标志）；（3）甲状腺间质，可见数量不等淋巴细胞浸润，甚至有滤泡形成(但本例不明显)，血管较丰富，扩张充血。</p>
+                </div>
+            </div>
+            <div class="card" id="card124">
+                <img src="img/124.png" alt="Image 124">
+                <div class="text">
+                    <h2>毒性甲状腺肿1 x400</h2>
+                    <p>甲亢时滤泡呈现乳头状突起，伴随单层立方上皮向单层柱状上皮的转变 （1）滤泡上皮细胞多数仍呈立方或柱状，有的呈乳头状突向滤泡腔（功能高度活动状态的标志）；（2）滤泡腔大小不等，有的滤泡腔内胶质较多红染，（术前碘治疗后复旧），多数滤泡内胶质少淡染，稀薄，胶质边缘有扇形的吸收空泡（功能高度活动状态的标志）；（3）甲状腺间质，可见数量不等淋巴细胞浸润，甚至有滤泡形成(但本例不明显)，血管较丰富，扩张充血。</p>
+                </div>
+            </div>
+            <div class="card" id="card125">
+                <img src="img/125.png" alt="Image 125">
+                <div class="text">
+                    <h2>毒性甲状腺肿1 x600</h2>
+                    <p>甲状腺滤泡腔中的胶质由于甲状腺亢进导致合成利用加强，被大量吸收 （1）滤泡上皮细胞多数仍呈立方或柱状，有的呈乳头状突向滤泡腔（功能高度活动状态的标志）；（2）滤泡腔大小不等，有的滤泡腔内胶质较多红染，（术前碘治疗后复旧），多数滤泡内胶质少淡染，稀薄，胶质边缘有扇形的吸收空泡（功能高度活动状态的标志）；（3）甲状腺间质，可见数量不等淋巴细胞浸润，甚至有滤泡形成(但本例不明显)，血管较丰富，扩张充血。</p>
+                </div>
+            </div>
+            <div class="card" id="card126">
+                <img src="img/126.png" alt="Image 126">
+                <div class="text">
+                    <h2>毒性甲状腺肿1 x1000</h2>
+                    <p>甲状腺滤泡上皮由单层立方上皮转变为活跃状态下的单层柱状上皮 （1）滤泡上皮细胞多数仍呈立方或柱状，有的呈乳头状突向滤泡腔（功能高度活动状态的标志）；（2）滤泡腔大小不等，有的滤泡腔内胶质较多红染，（术前碘治疗后复旧），多数滤泡内胶质少淡染，稀薄，胶质边缘有扇形的吸收空泡（功能高度活动状态的标志）；（3）甲状腺间质，可见数量不等淋巴细胞浸润，甚至有滤泡形成(但本例不明显)，血管较丰富，扩张充血。</p>
+                </div>
+            </div>
+            <div class="card" id="card127">
+                <img src="img/127.png" alt="Image 127">
+                <div class="text">
+                    <h2>慢性淋巴细胞性甲状腺炎1 全景</h2>
+                    <p>甲状腺滤泡腔在该视野下由明显减少，表现为萎缩状 </p>
+                </div>
+            </div>
+            <div class="card" id="card128">
+                <img src="img/128.png" alt="Image 128">
+                <div class="text">
+                    <h2>慢性淋巴细胞性甲状腺炎1 x200</h2>
+                    <p>甲状腺中出现淋巴滤泡，提示炎症产生 低倍下，甲状腺间质内大量淋巴细胞浸润，并有许多具生发中心的淋巴滤泡，除淋巴细胞外，还见浆细胞和巨噬细胞。</p>
+                </div>
+            </div>
+            <div class="card" id="card129">
+                <img src="img/129.png" alt="Image 129">
+                <div class="text">
+                    <h2>慢性淋巴细胞性甲状腺炎1 x600</h2>
+                    <p>左侧存在密集淋巴细胞分布，右侧可见散在分布的萎缩的甲状腺滤泡 高倍观察，甲状腺滤泡萎缩，胶原含量减少，滤泡上皮嗜酸性化生，胞浆内有嗜酸性颗粒，部分滤泡上皮呈反应性增生，柱状或高柱状滤泡上皮的细胞，核有异型性，但无核分裂。</p>
+                </div>
+            </div>
+            <div class="card" id="card130">
+                <img src="img/130.png" alt="Image 130">
+                <div class="text">
+                    <h2>胃幽门亚急性消化性溃疡1 全景</h2>
+                    <p>由外向内依次为黏膜层，黏膜下层，肌层；两侧可见正常的胃组织，中间有一处缺损</p>
+                    <p>放大观察，组织分三层结构:第一层是黏膜层，见密集的长管状腺体，主要由粘液细胞构成，为幽门腺;第二层是黏膜下层，由疏松结缔组织构成;第三层是肌层，由平滑肌构成。由此确定，这是胃壁的幽门部。切片中部一个凹陷处，此处黏膜、黏膜下层组织缺失，近黏膜面部分肌层中断，这里胃壁的缺损称为胃溃疡。溃疡的两侧组织结构有所不同，一侧黏膜是幽门腺，一侧黏膜见具有叶状绒毛特征的十二指肠肠腺，故此，这个溃疡位于胃幽门与十二指肠之间。同时可观察到，溃疡的贲门侧呈陷入式外观，幽门侧呈阶梯状外观。溃疡底部比较平整，自内向外大致可分为四层:(1)由中性白细胞和纤维素构成表面的渗出层;(2)染色较深红的坏死组织层;(3)富于毛细血管、纤维母细胞及炎症细胞浸润的肉芽组织层;(4)瘢痕组织层。在溃疡的底部与肌层之间可见一些较大的小动脉(如溃疡继续发展，可引起大出血)。</p>
+                </div>
+            </div>
+            <div class="card" id="card131">
+                <img src="img/131.png" alt="Image 131">
+                <div class="text">
+                    <h2>胃幽门亚急性消化性溃疡1 x100</h2>
+                    <p>病变（缺损）深达肌层，提示胃溃疡</p>
+                    <p>放大观察，组织分三层结构:第一层是黏膜层，见密集的长管状腺体，主要由粘液细胞构成，为幽门腺;第二层是黏膜下层，由疏松结缔组织构成;第三层是肌层，由平滑肌构成。由此确定，这是胃壁的幽门部。切片中部一个凹陷处，此处黏膜、黏膜下层组织缺失，近黏膜面部分肌层中断，这里胃壁的缺损称为胃溃疡。溃疡的两侧组织结构有所不同，一侧黏膜是幽门腺，一侧黏膜见具有叶状绒毛特征的十二指肠肠腺，故此，这个溃疡位于胃幽门与十二指肠之间。同时可观察到，溃疡的贲门侧呈陷入式外观，幽门侧呈阶梯状外观。溃疡底部比较平整，自内向外大致可分为四层:(1)由中性白细胞和纤维素构成表面的渗出层;(2)染色较深红的坏死组织层;(3)富于毛细血管、纤维母细胞及炎症细胞浸润的肉芽组织层;(4)瘢痕组织层。在溃疡的底部与肌层之间可见一些较大的小动脉(如溃疡继续发展，可引起大出血)。</p>
+                </div>
+            </div>
+            <div class="card" id="card132">
+                <img src="img/132.png" alt="Image 132">
+                <div class="text">
+                    <h2>胃幽门亚急性消化性溃疡1 x250</h2>
+                    <p>胃溃疡最外侧有深处层，本片不明显，可见小的团块状渗出物出现在最外层</p>
+                    <p>放大观察，组织分三层结构:第一层是黏膜层，见密集的长管状腺体，主要由粘液细胞构成，为幽门腺;第二层是黏膜下层，由疏松结缔组织构成;第三层是肌层，由平滑肌构成。由此确定，这是胃壁的幽门部。切片中部一个凹陷处，此处黏膜、黏膜下层组织缺失，近黏膜面部分肌层中断，这里胃壁的缺损称为胃溃疡。溃疡的两侧组织结构有所不同，一侧黏膜是幽门腺，一侧黏膜见具有叶状绒毛特征的十二指肠肠腺，故此，这个溃疡位于胃幽门与十二指肠之间。同时可观察到，溃疡的贲门侧呈陷入式外观，幽门侧呈阶梯状外观。溃疡底部比较平整，自内向外大致可分为四层:(1)由中性白细胞和纤维素构成表面的渗出层;(2)染色较深红的坏死组织层;(3)富于毛细血管、纤维母细胞及炎症细胞浸润的肉芽组织层;(4)瘢痕组织层。在溃疡的底部与肌层之间可见一些较大的小动脉(如溃疡继续发展，可引起大出血)。</p>
+                </div>
+            </div>
+            <div class="card" id="card133">
+                <img src="img/133.png" alt="Image 133">
+                <div class="text">
+                    <h2>胃幽门亚急性消化性溃疡1 x250</h2>
+                    <p>向内可见肉芽组织层和瘢痕层，有大量毛细血管、纤维母细胞以及少量的胶原纤维 </p>
+                    <p>放大观察，组织分三层结构:第一层是黏膜层，见密集的长管状腺体，主要由粘液细胞构成，为幽门腺;第二层是黏膜下层，由疏松结缔组织构成;第三层是肌层，由平滑肌构成。由此确定，这是胃壁的幽门部。切片中部一个凹陷处，此处黏膜、黏膜下层组织缺失，近黏膜面部分肌层中断，这里胃壁的缺损称为胃溃疡。溃疡的两侧组织结构有所不同，一侧黏膜是幽门腺，一侧黏膜见具有叶状绒毛特征的十二指肠肠腺，故此，这个溃疡位于胃幽门与十二指肠之间。同时可观察到，溃疡的贲门侧呈陷入式外观，幽门侧呈阶梯状外观。溃疡底部比较平整，自内向外大致可分为四层:(1)由中性白细胞和纤维素构成表面的渗出层;(2)染色较深红的坏死组织层;(3)富于毛细血管、纤维母细胞及炎症细胞浸润的肉芽组织层;(4)瘢痕组织层。在溃疡的底部与肌层之间可见一些较大的小动脉(如溃疡继续发展，可引起大出血)。</p>
+                </div>
+            </div>
+            <div class="card" id="card134">
+                <img src="img/134.png" alt="Image 134">
+                <div class="text">
+                    <h2>胃溃疡2 全景</h2>
+                    <p>作者很神秘什么都没说</p>
+                </div>
+            </div>
+            <div class="card" id="card135">
+                <img src="img/135.png" alt="Image 135">
+                <div class="text">
+                    <h2>胃溃疡2 x200</h2>
+                    <p>可见渔网状的肉芽组织层、坏死层等</p>
+                </div>
+            </div>
+            <div class="card" id="card136">
+                <img src="img/136.png" alt="Image 136">
+                <div class="text">
+                    <h2>胃溃疡2 x200</h2>
+                    <p>内层的血管可能在破裂后造成胃出血，临床表现为便血</p>
+                </div>
+            </div>
+            <div class="card" id="card137">
+                <img src="img/137.png" alt="Image 137">
+                <div class="text">
+                    <h2>胃溃疡2 x200</h2>
+                    <p>部分瘢痕组织深入肌层</p>
+                </div>
+            </div>
+            <div class="card" id="card138">
+                <img src="img/138.png" alt="Image 138">
+                <div class="text">
+                    <h2>急性病毒性肝炎2 x250</h2>
+                    <p>肝细胞广泛出现气球样变性，表现为严重的细胞水肿 低倍观察，见肝小叶及汇管区结构，为肝组织</p>
+                </div>
+            </div>
+            <div class="card" id="card39">
+                <img src="img/139.png" alt="Image 139">
+                <div class="text">
+                    <h2>急性病毒性肝炎2 x250</h2>
+                    <p>肝组织内散在点状坏死，为若干细胞的聚集坏死现象 低倍观察，见肝小叶及汇管区结构，为肝组织</p>
+                </div>
+            </div>
+            <div class="card" id="card140">
+                <img src="img/140.png" alt="Image 140">
+                <div class="text">
+                    <h2>急性病毒性肝炎2 x800</h2>
+                    <p>可见一些棕色颗粒，为黄疸 高倍观察，肝细胞普遍肿大，胞浆疏松透亮，胞浆见少许颗粒状物质，但多数空着，胞核小而圆形，深染，胞界清楚，这些肝细胞好似气球，故称之为肝细胞的“气球样变”。由于肝细胞肿张，肝窦变狭小，甚看不清。在普遍发生气球样变的肝细胞中，可见单个肝细胞胞浆红染，浓缩，核深染，这是肝细胞的“嗜酸性变”，还可见到深红色均一浓染的圆形小体，称康氏小体，这是肝细胞的嗜酸性坏死。除此之外，可见肝小叶内散在的小灶性肝细胞坏死，该处可见中性白细胞浸润，汇管区处可见淋巴细胞、浆细胞浸润。肝窦处枯否氏细胞反应性增生，并有吞噬现象。可见肝细胞增生现象，如见到双核肝细胞。</p>
+                </div>
+            </div>
+            <div class="card" id="card141">
+                <img src="img/141.png" alt="Image 141">
+                <div class="text">
+                    <h2>早期胃癌（表浅凹陷型）</h2>
+                    <p>有溃疡病形成，但表浅，未达黏膜下层。</p>
+                </div>
+            </div>
+            <div class="card" id="card142">
+                <img src="img/142.png" alt="Image 142">
+                <div class="text">
+                    <h2>溃疡型胃癌</h2>
+                    <p>胃黏膜面见一个直径大于2cm的不规则溃疡，中央凹陷，边缘隆起呈围堤状。溃疡底部凹凸不平伴出血坏死。</p>
+                </div>
+            </div>
+            <div class="card" id="card143">
+                <img src="img/143.png" alt="Image 143">
+                <div class="text">
+                    <h2>弥漫浸润型胃癌（革囊胃、皮革胃）</h2>
+                    <p>正常胃黏膜皱壁已消失，代之为灰白色，弥漫增厚变硬的癌组织。断面观，灰白色癌组织侵入肌层达到浆膜下。浆膜亦明显增厚。由于胃壁弥漫性增厚变硬．故称为革囊胃。</p>
+                </div>
+            </div>
+            <div class="card" id="card144">
+                <img src="img/144.png" alt="Image 144">
+                <div class="text">
+                    <h2>大结节肝硬变</h2>
+                    <p>肝脏体积缩小，质地变硬，表面及切面可见广泛分布的灰白色结节，结节大小较一致。结节间有纤维结缔组织形成。</p>
+                </div>
+            </div>
+            <div class="card" id="card145">
+                <img src="img/145.png" alt="Image 145">
+                <div class="text">
+                    <h2>小结节肝硬变</h2>
+                    <p>肝脏体积缩小，边缘锐利。表面及切面布满大小相仿的灰色小结节，直径为0.3cm左右大小，结节之间有纤细的纤维组织分隔，分隔厚薄均匀。</p>
+                </div>
+            </div>
+            <div class="card" id="card146">
+                <img src="img/146.png" alt="Image 146">
+                <div class="text">
+                    <h2>食道静脉曲张</h2>
+                    <p>食道一段，透过黏膜面隐约可见大致呈纵形蜿蜒曲折的扩张静脉。（尸检当时，见其更为粗大，隆起于黏膜面，现因静脉腔内血液大量流出，故已变细，表面也变平坦）</p>
+                </div>
+            </div>
+            <div class="card" id="card147">
+                <img src="img/147.png" alt="Image 147">
+                <div class="text">
+                    <h2>巨块型肝癌</h2>
+                    <p>肝脏局部肿大，切面可见一巨大的肿块，境界较清楚但无包膜，灰白实性，可伴坏死、出血。</p>
+                </div>
+            </div>
+            <div class="card" id="card148">
+                <img src="img/148.png" alt="Image 148">
+                <div class="text">
+                    <h2>多结节型肝癌</h2>
+                    <p>肝切面见数个体积较大结节，灰黄色、粗糙、有出血坏死。肿块周围肝组织呈小结节性肝硬化。</p>
+                </div>
+            </div>
+            <div class="card" id="card149">
+                <img src="img/149.png" alt="Image 149">
+                <div class="text">
+                    <h2>胃黏液癌1 全景</h2>
+                    <p>右侧可见正常胃组织的黏膜层 见胃腺及胃壁其他组织结构，为胃组织。胃黏膜层无异常，但在胃的黏膜下层及部分肌层内，见大量淡蓝色粘液。</p>
+                </div>
+            </div>
+            <div class="card" id="card150">
+                <img src="img/150.png" alt="Image 150">
+                <div class="text">
+                    <h2>胃黏液癌1 x800</h2>
+                    <p>可见癌细胞(印戒状细胞) 其中散在单个细胞或围成腺腔样的细胞，这些细胞胞浆呈泡沫或空泡状，胞核淡染，呈圆形、椭圆形或半月形，位于胞浆边缘一侧，使整人细胞似一个带印的戒指，称为印戒状细胞。</p>
+                </div>
+            </div>
+            <div class="card" id="card151">
+                <img src="img/151.png" alt="Image 151">
+                <div class="text">
+                    <h2>门脉性肝硬化1 全景</h2>
+                    <p>肝不规则组织一块，呈红染。 </p>
+                </div>
+            </div>
+            <div class="card" id="card152">
+                <img src="img/152.png" alt="Image 152">
+                <div class="text">
+                    <h2>门脉性肝硬化1 x100</h2>
+                    <p>假小叶中未包含中央静脉（较大假小叶内可包含两个中央静脉或是中央静脉偏位） 低倍观察，为肝组织，但不见正常的肝小叶结构、肝组织被结缔组织分隔包绕成大小不等的圆形、椭圆形结节。</p>
+                </div>
+            </div>
+            <div class="card" id="card153">
+                <img src="img/153.png" alt="Image 153">
+                <div class="text">
+                    <h2>门脉性肝硬化1 x600</h2>
+                    <p>部分肝细胞发生脂肪变性 高倍观察，结节内肝细胞索排列紊乱，中央静脉缺如、偏位或见2-3个中央静脉，有时可见包绕进来的汇管区，这样结构的结节称为假小叶。此外，可见假小叶内少数肝细胞脂肪变性或灶性坏死，包绕假小叶的结缔组织较薄，宽狭较一致，其内见少量淋巴细胞、浆细胞浸润及小胆管增生(假胆管)。</p>
+                </div>
+            </div>
+            <div class="card" id="card154">
+                <img src="img/154.png" alt="Image 154">
+                <div class="text">
+                    <h2>蚤咬肾</h2>
+                    <p>肾脏体积增大、表面充血，肾脏表面见散在粟粒大小的出血点，切面见皮质增厚。</p>
+                </div>
+            </div>
+            <div class="card" id="card155">
+                <img src="img/155.png" alt="Image 155">
+                <div class="text">
+                    <h2>慢性硬化性肾小球肾炎（颗粒型固缩肾）</h2>
+                    <p>已切开之肾脏，体积缩小，被膜增厚（已剥离），表面呈弥漫细颗粒状。切面灰白，实质萎缩变薄，条纹不清，皮髓质分界不清，肾盂脂肪增多。</p>
+                </div>
+            </div>
+            <div class="card" id="card156">
+                <img src="img/156.png" alt="Image 156">
+                <div class="text">
+                    <h2>急性肾盂肾炎（逆行感染）</h2>
+                    <p>肾脏体积增大、表面可见散在大小不等的黄白色脓肿。脓肿周围可见充血带。切面肾盂黏膜充血，出血及水肿，其表面见脓性渗出物附着。肾髓质内可见黄色条纹，并向皮质伸展，有处融合成小脓肿。此标本为下行感染之急性肾盂肾炎。</p>
+                </div>
+            </div>
+            <div class="card" id="card157">
+                <img src="img/157.png" alt="Image 157">
+                <div class="text">
+                    <h2>弥漫性增生性肾小球肾炎1 全景</h2>
+                    <p>可见肾小球与肾小管结构 取材与全景观察：楔形组织一块，倒转目镜观察可见标本的弯曲面部分有许多深色的球形小体，均匀分布在脏器的表层，据此可知这是肾脏皮质。皮质下可见平行行走扩张充血的小静脉。</p>
+                </div>
+            </div>
+            <div class="card" id="card158">
+                <img src="img/158.png" alt="Image 158">
+                <div class="text">
+                    <h2>弥漫性增生性肾小球肾炎1 x400</h2>
+                    <p>肾小球增大，细胞增多，提示增生 </p>
+                    <p>可以辨认出以下几种细胞(1)增生的血管内皮细胞；(2)增生的肾小囊脏层细胞；(3)增生的血管系膜细胞；(4)一些嗜中性白细胞；(5)少量红细胞。肾小囊呈裂隙状，毛细血管腔狭窄或闭塞。肾小管与肾间质变化不大，近曲小管上皮未见肿胀，只是管腔中含红染凝聚的蛋白液，称为透明管型。</p>
+                </div>
+            </div>
+            <div class="card" id="card159">
+                <img src="img/159.png" alt="Image 159">
+                <div class="text">
+                    <h2>弥漫性增生性肾小球肾炎1 x600</h2>
+                    <p>内皮细胞、脏层细胞数目增多，压迫周围血管</p>
+                    <p>可以辨认出以下几种细胞(1)增生的血管内皮细胞；(2)增生的肾小囊脏层细胞；(3)增生的血管系膜细胞；(4)一些嗜中性白细胞；(5)少量红细胞。肾小囊呈裂隙状，毛细血管腔狭窄或闭塞。肾小管与肾间质变化不大，近曲小管上皮未见肿胀，只是管腔中含红染凝聚的蛋白液，称为透明管型。</p>
+                </div>
+            </div>
+            <div class="card" id="card160">
+                <img src="img/160.png" alt="Image 160">
+                <div class="text">
+                    <h2>弥漫性增生性肾小球肾炎1 x600</h2>
+                    <p>肾小管管腔中有红染凝聚的蛋白液，成为透明管型</p>
+                    <p>可以辨认出以下几种细胞(1)增生的血管内皮细胞；(2)增生的肾小囊脏层细胞；(3)增生的血管系膜细胞；(4)一些嗜中性白细胞；(5)少量红细胞。肾小囊呈裂隙状，毛细血管腔狭窄或闭塞。肾小管与肾间质变化不大，近曲小管上皮未见肿胀，只是管腔中含红染凝聚的蛋白液，称为透明管型。</p>
+                </div>
+            </div>
+            <div class="card" id="card161">
+                <img src="img/161.png" alt="Image 161">
+                <div class="text">
+                    <h2>星月体性肾小球肾炎5 ×250</h2>
+                    <p>作者很神秘什么都没说</p>
+                </div>
+            </div>
+            <div class="card" id="card162">
+                <img src="img/162.png" alt="Image 162">
+                <div class="text">
+                    <h2>星月体性肾小球肾炎5 ×800</h2>
+                    <p>作者很神秘什么都没说</p>
+                </div>
+            </div>
+            <div class="card" id="card163">
+                <img src="img/163.png" alt="Image 163">
+                <div class="text">
+                    <h2>星月体性肾小球肾炎2 全景</h2>
+                    <p>低倍观察，为肾组织，整个组织的肾小球均增大，大部分肾小球的细胞数目增多，并有少量炎细胞浸润。</p>
+                </div>
+            </div>
+            <div class="card" id="card164">
+                <img src="img/164.png" alt="Image 164">
+                <div class="text">
+                    <h2>星月体性肾小球肾炎2 x400</h2>
+                    <p>高倍观察大部分肾小球囊壁层上皮细胞显著增生，增生的上皮细胞肿大，梭形，成层排死，呈半月形或环形位于血管周围肾小囊之内，有的新月体内有假腺体形成，有的半月体或环形体已开始有纤维形成，一些半月体或环形体内增生的上皮细胞间可见一些白细胞、红细胞及纤维素，偶见个别肾小球的球丛毛细血管发生纤维素坏死，肾曲管扩张，上皮细胞变扁平，多数管腔内有红染的蛋白质液，或有白细胞、红细胞，肾皮质的间质血管扩张充血，并有少数中性白细胞浸润，髓质肾小管内见红染蛋白管型或一些白细胞、红细胞、细胞碎屑。</p>
+                </div>
+            </div>
+            <div class="card" id="card165">
+                <img src="img/165.png" alt="Image 165">
+                <div class="text">
+                    <h2>慢性硬化性肾小球肾炎1 全景</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card166">
+                <img src="img/166.png" alt="Image 166">
+                <div class="text">
+                    <h2>慢性硬化性肾小球肾炎1 x200</h2>
+                    <p>肾小球与周围的肾小管萎缩与纤维化，其他肾小球代偿性增大</p>
+                </div>
+            </div>
+            <div class="card" id="card167">
+                <img src="img/167.png" alt="Image 167">
+                <div class="text">
+                    <h2>慢性硬化性肾小球肾炎1 x400</h2>
+                    <p>萎缩性肾小球周围还存在弥漫的淋巴细胞</p>
+                </div>
+            </div>
+            <div class="card" id="card168">
+                <img src="img/168.png" alt="Image 168">
+                <div class="text">
+                    <h2>慢性硬化性肾小球肾炎1 x800</h2>
+                    <p>灶性病变处，可见多数肾小球有程度不等的纤维化和玻璃样变，严重者整个肾小球呈玻璃样变。其中只见少数细胞核。具有这些病变的肾小球，其周围的肾小管也发生萎缩，有的管腔内有红染的透明管型。间质纤维增生伴淋巴细胞浸润。无明显病变处，则见肾小球代偿性增大，其周围肾小管扩张，部分腔内含有蛋白性物质。间质内中等动脉内膜纤维增生变厚，管腔狭窄，髓质未见明显病变。</p>
+                </div>
+            </div>
+            <div class="card" id="card169">
+                <img src="img/169.png" alt="Image 169">
+                <div class="text">
+                    <h2>流行性乙型脑炎</h2>
+                    <p>脑膜血管显著充血，在白质内见小血管扩张充血，呈黑色状或细条索状。灰白质交界区可见多数粟粒大，针尖大的圆形略凹陷的发暗的陷窝即软化灶。视丘处也可见相同病变。注:变质性炎。</p>
+                </div>
+            </div>
+            <div class="card" id="card170">
+                <img src="img/170.png" alt="Image 170">
+                <div class="text">
+                    <h2>流行性脑脊髓膜炎</h2>
+                    <p>大脑脑回变宽，脑沟变浅，蛛网膜、软脑膜血管扩张充血，蛛网膜下腔有灰黄色脓性渗出物，覆盖脑沟、脑回，严重的区域沟回结构模糊不清。注：黑色条索状结构为血管充血，属于化脓性炎。</p>
+                </div>
+            </div>
+            <div class="card" id="card171">
+                <img src="img/171.png" alt="Image 171">
+                <div class="text">
+                    <h2>肺原发综合征</h2>
+                    <p>小儿之肺，肺切面可见一侧肺中部近肺膜处有一花生米大的干酪样坏死病灶（原发病灶），切面灰黄色，境界清楚。肺门淋巴结明显肿大，切面灰黄（干酪样坏死）（结核性淋巴管炎在标本中往往不易查见）。</p>
+                </div>
+            </div>
+            <div class="card" id="card172">
+                <img src="img/172.png" alt="Image 172">
+                <div class="text">
+                    <h2>急性粟粒性肺结核</h2>
+                    <p>肺的表面及切面均可见大量散在的，分布比较均匀的黄白色粟粒大小结节，结节大小比较一致，呈圆形，微隆起，境界清楚。</p>
+                </div>
+            </div>
+            <div class="card" id="card173">
+                <img src="img/173.png" alt="Image 173">
+                <div class="text">
+                    <h2>浸润性肺结核</h2>
+                    <p>肺上叶的上部相当于锁骨以下区域有一个黄白色干酪样坏死灶，病变较大，中间坏死脱落，周围边界模糊，有小的炎性渗出病灶。有的标本整个上叶被浸润的结核性炎所波及。</p>
+                </div>
+            </div>
+            <div class="card" id="card174">
+                <img src="img/174.png" alt="Image 174">
+                <div class="text">
+                    <h2>纤维空洞性肺结核</h2>
+                    <p>肺切面上可见数个大小不等，形状不一的空洞，空洞壁附有残存的干酪样坏死物质，空洞壁间有处可见灰黄色的干酪样坏死灶。肺内纤维组织增生，胸膜呈纤维性增厚。另一标本肺上叶有大部分被破坏，形成巨大的空洞，空洞壁为较厚的纤维组织构成。壁内粗糙，附有干酪样坏死物质。洞腔内有残余的血管横架于空洞内，周围肺组织纤维化。</p>
+                </div>
+            </div>
+            <div class="card" id="card175">
+                <img src="img/175.png" alt="Image 175">
+                <div class="text">
+                    <h2>肺结核球</h2>
+                    <p>标本为局部切开的肺脏，肺表面可见一较大的圆形病灶，直径约2.0cm。病灶呈灰白色，中心有干酪样坏死，周围被肉芽组织及结缔组织包裹，使其与肺组织境界清楚。</p>
+                </div>
+            </div>
+            <div class="card" id="card176">
+                <img src="img/176.png" alt="Image 176">
+                <div class="text">
+                    <h2>肠伤寒（髓样肿胀期）</h2>
+                    <p>回肠黏膜面有肿胀隆起，形状椭圆的集合淋巴结及圆形的孤立淋巴结，质软，表面高低不平，形似脑回。临近肠黏膜充血、水肿，黏液分泌增多。</p>
+                </div>
+            </div>
+            <div class="card" id="card177">
+                <img src="img/177.png" alt="Image 177">
+                <div class="text">
+                    <h2>肠伤寒（坏死期）</h2>
+                    <p>肿胀隆起的淋巴组织内发生灶性坏死，坏死呈淡褐色并凹陷，边缘隆起。</p>
+                </div>
+            </div>
+            <div class="card" id="card178">
+                <img src="img/178.png" alt="Image 178">
+                <div class="text">
+                    <h2>肠伤寒（溃疡期）</h2>
+                    <p>回肠黏膜可见圆形或椭圆形溃疡，边缘隆起，底部凹凸不平，可见暴露的环肌层，溃疡长轴与肠长轴平行。</p>
+                </div>
+            </div>
+            <div class="card" id="card179">
+                <img src="img/179.png" alt="Image 179">
+                <div class="text">
+                    <h2>细菌性痢疾</h2>
+                    <p>肠黏膜表面覆盖一层灰白色米糠样假膜，有的区域假膜脱落形成大小不等、形状不一的浅在地图状溃疡。</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="randomButton">我来看看怎么个事</button>
+            <button id="resetButton">大病开始之前</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
+</html>
