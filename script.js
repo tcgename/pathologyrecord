@@ -25,8 +25,15 @@ document.getElementById('resetButton').addEventListener('click', function() {
     displayedCards.clear();
     cards.forEach(card => {
         card.style.display = 'none';
+        card.classList.remove('show-text'); // Remove text display class
     });
     updateRemainingCount();
+});
+
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('show-text'); // Toggle text display on click
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function() {

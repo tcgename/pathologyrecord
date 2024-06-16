@@ -82,6 +82,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     background: #fff;
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
 }
 
 .card img {
@@ -107,7 +108,7 @@ body {
     border-bottom-right-radius: 12px;
 }
 
-.card:hover .text {
+.card.show-text .text {
     opacity: 1;
 }
 
@@ -148,12 +149,17 @@ button {
 }
 
 #resetButton {
-    background-color: #ff0000;
+    background-color: #4ecc00;
     color: #000;
 }
 
 #resetButton:hover {
-    background-color: #cc0000;
+    background-color: #4ecc00;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
+}
+
+footer p {
+    font-size: 0.3em;
+    text-align: center; color: rgb(67, 58, 105); padding: 0 1em;
 }
