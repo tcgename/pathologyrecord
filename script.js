@@ -1,5 +1,7 @@
 const cards = document.querySelectorAll('.card');
 const remainingCountElement = document.getElementById('remainingCount');
+const modal = document.getElementById('updateModal');
+const closeButton = document.querySelector('.close-button');
 let remainingCards = Array.from(cards);
 let displayedCards = new Set();
 
@@ -61,6 +63,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }, index * 100); // Stagger the animation of each element
         });
     }, 2000);
+
+    // Show the modal
+    modal.style.display = 'block';
+});
+
+closeButton.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
 });
 
 function updateRemainingCount() {
