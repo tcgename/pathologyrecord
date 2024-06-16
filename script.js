@@ -4,6 +4,7 @@ const modal = document.getElementById('updateModal');
 const closeButton = document.querySelector('.close-button');
 let remainingCards = Array.from(cards);
 let displayedCards = new Set();
+let historyStack = [];
 
 document.getElementById('randomButton').addEventListener('click', function() {
     if (remainingCards.length === 0) return;
@@ -16,6 +17,7 @@ document.getElementById('randomButton').addEventListener('click', function() {
     });
     selectedCard.style.display = 'block';
 
+    historyStack.push(selectedCard);
     displayedCards.add(selectedCard);
     remainingCards = remainingCards.filter(card => !displayedCards.has(card));
     
@@ -25,11 +27,30 @@ document.getElementById('randomButton').addEventListener('click', function() {
 document.getElementById('resetButton').addEventListener('click', function() {
     remainingCards = Array.from(cards);
     displayedCards.clear();
+    historyStack = [];
     cards.forEach(card => {
         card.style.display = 'none';
         card.classList.remove('show-text'); // Remove text display class
     });
     updateRemainingCount();
+});
+
+document.getElementById('previousButton').addEventListener('click', function() {
+    if (historyStack.length > 1) {
+        // Remove the current card
+        historyStack.pop();
+        const previousCard = historyStack[historyStack.length - 1];
+
+        cards.forEach(card => {
+            card.style.display = 'none';
+        });
+        previousCard.style.display = 'block';
+
+        displayedCards.delete(previousCard);
+        remainingCards.push(previousCard);
+        
+        updateRemainingCount();
+    }
 });
 
 cards.forEach(card => {
@@ -42,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const randomIndex = Math.floor(Math.random() * cards.length);
     cards[randomIndex].style.display = 'block';
 
+    historyStack.push(cards[randomIndex]);
     displayedCards.add(cards[randomIndex]);
     remainingCards = remainingCards.filter(card => !displayedCards.has(card));
     

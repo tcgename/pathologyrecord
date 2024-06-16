@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>看图说话2.2</title>
+    <title>看图说话3.0</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,10 +13,10 @@
     <div id="updateModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2>2.2版本更新</h2>
-            <p>1)更新了手机上显示内容异常</p>
-            <p>2)更改常用按键</p>
-            <p>3)增加作者署名</p>
+            <h2>3.0版本更新</h2>
+            <p>1)增加新功能，回溯功能，返回上一个病理图片</p>
+            <p>2)更正知识错误，脑脓肿描述</p>
+            <p>3)按钮美术优化</p>
         </div>
     </div>
     <div class="content" style="display: none;">
@@ -310,14 +310,14 @@
                 <img src="img/42.png" alt="Image 42">
                 <div class="text">
                     <h2>脑脓肿1 全景</h2>
-                    <p>左上角和侧均有脓肿区 取材与全景观察:长方形组织一块，红染，其内有散在数个、圆形大小不一、蓝色的小灶。局部观察:低倍观察为肝组织，肝小叶结构正常;</p>
+                    <p>左上角和侧均有脓肿区</p>
                 </div>
             </div>
             <div class="card" id="card43">
                 <img src="img/43.png" alt="Image 43">
                 <div class="text">
                     <h2>脑脓肿1 ×1000</h2>
-                    <p>脓肿区内部有中性粒细胞死亡变成的脓细胞，也可见大量细胞碎片 高倍观察，门管区有少量淋巴细胞及中性白细胞浸润。肝细胞的胞浆内有大小不等的空泡(脂肪变性)。肝组织内散在的多个蓝色小灶的病变基本相同，表现为病灶内的肝组织结构消失，充满中性白细胞及一些坏死肝细胞、星状细胞，而大部分中性白细胞境界不清，胞浆染色深浅不一，核碎裂，浓缩或消失，这些坏死的中性白细胞即脓细胞，上述这种病灶称为脓肿，脓肿周围的肝细胞因受脓液压迫而稍呈萎缩。</p>
+                    <p>脓肿区内部有中性粒细胞死亡变成的脓细胞，也可见大量细胞碎片</p>
                 </div>
             </div>
             <div class="card" id="card44">
@@ -1292,6 +1292,7 @@
             </div>
         </div>
         <div class="buttons-container">
+            <button id="previousButton">哎，这位小姐？</button>
             <button id="randomButton">我来看看你有什么大病</button>
             <button id="resetButton">坐诊结束</button>
         </div>
